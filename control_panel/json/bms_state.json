@@ -1,0 +1,10 @@
+[
+  {"description": "Charge", "flag": 0},
+  {"description": "Idle", "flag": 1},
+  {"description": "Precharge", "flag": 2},
+  {"description": "Ready", "flag": 3},
+  {"description": "Run", "flag": 4},
+  {"description": "Balancing", "flag": 5},
+  {"description": "Emergency", "flag": 8},
+  {"description": "Disconnected", "flag": 10}
+]

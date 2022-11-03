@@ -1,0 +1,5 @@
+[
+    {"description": "Default", "flag": 0},
+    {"description": "ControlledBrake", "flag": 1},
+    {"description": "EmergencyBrake", "flag": 2}
+  ]

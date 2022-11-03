@@ -1,0 +1,35 @@
+[
+  {"error_type": "No Error", "flag": "0x0000",
+    "description": "-"
+  },
+  {"error_type": "Factory ECC Err", "flag": "0x0001",
+    "description": "An uncorrectable ECC fault was detected while loading from factory registers.\nRegisters in the block (not all registers) have been loaded with their default values. The device\nis operating abnormally and has probably failed. Functionality, behavior, and results are suspect\nand should not be relied upon."
+  },
+  {"error_type": "Factory ECC Corr", "flag": "0x0002",
+    "description": "A ECC fault was corrected while loading factory space from EEPROM."
+  },
+  {"error_type": "User ECC Err", "flag": "0x0004",
+    "description": "An uncorrectable ECC fault was detected while loading from EEPROM. Registers in\nthe block (not all registers) have been loaded with their default values."
+  },
+  {"error_type": "User ECC Corr", "flag": "0x0008",
+    "description": "A ECC fault was corrected while loading user space from EEPROM."
+  },
+  {"error_type": "ADC Calib", "flag": "0x0010",
+    "description": "An ADC test (ADC_FCAL_TEST or ADC_PCAL_TEST) failed."
+  },
+  {"error_type": "HREF Ground", "flag": "0x0800",
+    "description": "Analog-die reference ground measurement was out of range."
+  },
+  {"error_type": "HREF", "flag": "0x1000",
+    "description": "Analog die 4.5-V reference measurement was out of range."
+  },
+  {"error_type": "Analog Fault", "flag": "0x2000",
+    "description": "The analog die is reporting an error, but it cannot tell what the error is (no error\ncondition has been detected). This may be caused by a single event upset, or possibly the\ndevice has failed. If this occurs consistently, the device should be removed from service."
+  },
+  {"error_type": "Fact Checksum", "flag": "0x4000",
+    "description": "A checksum error was detected in the factory registers."
+  },
+  {"error_type": "User Checksum", "flag": "0x8000",
+    "description": "A checksum error was detected in the registers. This fault is self-clearing when the condition goes away."
+  }
+]

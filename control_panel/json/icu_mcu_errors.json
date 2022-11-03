@@ -1,0 +1,92 @@
+[
+  {"error_type": "No Error", "flag": "0x0000000",
+    "description": "-"
+  },
+  {"error_type": "HAL Error (0x00000001)", "flag": "0x00000001",
+    "description": "Error occurred while using a HAL driver"
+  },
+  {"error_type": "Timer Error (0x00000002)", "flag": "0x00000002",
+    "description": "Timerfunctions caused an error"
+  },
+  {"error_type": "Task Busy (0x00000004)", "flag": "0x00000004",
+    "description": "The Task is busy."
+  },
+  {"error_type": "Timeout (0x00000008)", "flag": "0x00000008",
+    "description": "A timeout occurred while waiting for a semaphore to take."
+  },
+  {"error_type": "Overflow (0x00000010)", "flag": "0x00000010",
+    "description": "An overflow occurred."
+  },
+  {"error_type": "Range Error(0x00000020)", "flag": "0x00000020",
+    "description": "A parameter is out of the allowed range."
+  },
+  {"error_type": "Memory Error (0x00000040)", "flag": "0x00000040",
+    "description": "Insufficient Heap Memory."
+  },
+  {"error_type": "Task notify Error (0x00000080)", "flag": "0x00000080",
+    "description": "A task notification failed."
+  },
+  {"error_type": "Bad Instance (0x000000100)", "flag": "0x000000100",
+    "description": "An instance out of range has been chosen."
+  },
+  {"error_type": "FPGA Fingerprint (0x00000200)", "flag": "0x00000200",
+    "description": "FPGA config SPI did not send correct fingerprint."
+  },
+  {"error_type": "FPGA Echo (0x00000400)", "flag": "0x00000400",
+    "description": "FPGA config SPI did not echo data sent."
+  },
+  {"error_type": "FPGA Config (0x00000800)", "flag": "0x00000800",
+    "description": "Unsuccessful setting of a value, Get does not correspond to value in Set."
+  },
+  {"error_type": "FPGA Reset Timeout (0x00001000)", "flag": "0x00001000",
+    "description": "FPGA did not return to Idle after reset."
+  },
+  {"error_type": "FPGA (0x00002000)", "flag": "0x00002000",
+    "description": "FPGA error without category."
+  },
+  {"error_type": "Fpga No Heartbeat (0x00004000)", "flag": "0x00004000",
+    "description": "ICU recieved no Heartbeat from FPGA."
+  },
+  {"error_type": "Fpga False Heartbeat (0x00008000)", "flag": "0x00008000",
+    "description": "ICU recieved not the correct Heartbeat command from FPGA."
+  },
+  {"error_type": "VCU (0x00010000)", "flag": "0x00010000",
+    "description": "Recieved an Emergency from the VCU."
+  },
+  {"error_type": "Temperature (0x00020000)", "flag": "0x00020000",
+    "description": "MOSFET Temperatures are too high or incorrect/missing."
+  },
+  {"error_type": "High Voltage (0x00040000)", "flag": "0x00040000",
+    "description": "Overvoltage at a HV Board."
+  },
+  {"error_type": "SD Mount Error (0x00080000)", "flag": "0x00080000",
+    "description": "The SD Card is not inside the IDU."
+  },
+  {"error_type": "Open Dir on SD Error (0x00100000)", "flag": "0x00100000",
+    "description": "Open directory on SD Card."
+  },
+  {"error_type": "Open File on SD Error (0x00200000)", "flag": "0x00200000",
+    "description": "A file is open on the SD card."
+  },
+  {"error_type": "Write SD Error (0x00400000)", "flag": "0x00400000",
+    "description": "A SD Card write error occurred."
+  },
+  {"error_type": "SD Sync Error (0x00800000)", "flag": "0x00800000",
+    "description": "SD Card Sync Error."
+  },
+  {"error_type": "Invalid Argument (0x01000000)", "flag": "0x01000000",
+    "description": "Function call with invalid argument at ICU."
+  },
+  {"error_type": "CAN FD (0x02000000)", "flag": "0x02000000",
+    "description": "Timeout with CAN FD at ICU."
+  },
+  {"error_type": "CAN FD Queue Empty (0x04000000)", "flag": "0x04000000",
+    "description": "CAN Queue is empty."
+  },
+  {"error_type": "Heartbeat VCU (0x08000000)", "flag": "0x08000000",
+    "description": "Heartbeat was missing from VCU."
+  },
+  {"error_type": "SPI Invalid Packets Exceeded (0x10000000)", "flag": "0x10000000",
+    "description": "Temp/Voltage SPI received too many invalid packets with invalid padding."
+  }
+]

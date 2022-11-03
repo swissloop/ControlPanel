@@ -1,0 +1,43 @@
+{
+  "name": "control-panel",
+  "version": "3.0.0",
+  "description": "Displays telemetry and logs for Swissloop Pods.",
+  "main": "control_panel/app.js",
+  "homepage": "https://github.com/swissloop/ControlPanel",
+  "author": "Philip Wiese <philip.wiese@swissloop.ch> (http://https://github.com/Xeratec)",
+  "license": "LGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swissloop/ControlPanel"
+  },
+  "scripts": {
+    "start": "run-script-os",
+    "start:nix": "DEV=true ELECTRON_DISABLE_SECURITY_WARNINGS=true electron .",
+    "start:win32": "set DEV=true&&set ELECTRON_DISABLE_SECURITY_WARNINGS=true&&electron .",
+    "mock": "run-script-os",
+    "mock:nix": "DEV=true ELECTRON_DISABLE_SECURITY_WARNINGS=true electron mock_server/mockserver.js",
+    "mock:win32": "set DEV=true&&set ELECTRON_DISABLE_SECURITY_WARNINGS=true&&electron mock_server/mockserver.js",
+    "generate_parser": "node control_panel/js/generator.js"
+  },
+  "devDependencies": {
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "@arction/lcjs": "^3.4.0",
+    "@electron/remote": "^2.0.8",
+    "bootstrap-slider": "^11.0.2",
+    "bootstrap": "^4.6.0",
+    "dataframe-js": "^1.4.4",
+    "electron-localshortcut": "^3.2.1",
+    "electron": "^21.3.1",
+    "fast-csv": "^4.3.6",
+    "jbinary": "^2.1.5",
+    "jquery": "^3.6.1",
+    "moment": "^2.29.4",
+    "node-fetch": "^3.2.10",
+    "npm": "^8.19.3",
+    "popper.js": "^1.16.1",
+    "riot": "^3.13.2",
+    "run-script-os": "^1.1.6"
+  }
+}

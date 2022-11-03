@@ -1,0 +1,6 @@
+[
+    {"description": "-", "flag": 0},
+    {"description": "On", "flag": 1},
+    {"description": "Pull-up", "flag": 2},
+    {"description": "Pull-up + On", "flag": 3}
+  ]

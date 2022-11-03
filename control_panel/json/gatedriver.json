@@ -1,0 +1,23 @@
+[
+  {"error_type": "No Error", "description": "-", "flag": "0x00000000"},
+  {"error_type": "GateDriver_0_Flt_0", "description": "GateDriver_0_Flt_0", "flag": "0x00000001"},
+  {"error_type": "GateDriver_0_Flt_1", "description": "GateDriver_0_Flt_1", "flag": "0x00000002"},
+  {"error_type": "GateDriver_0_Flt_2", "description": "GateDriver_0_Flt_2", "flag": "0x00000004"},
+  {"error_type": "GateDriver_1_Flt_0", "description": "GateDriver_1_Flt_0", "flag": "0x00000008"},
+  {"error_type": "GateDriver_1_Flt_1", "description": "GateDriver_1_Flt_1", "flag": "0x00000010"},
+  {"error_type": "GateDriver_1_Flt_2", "description": "GateDriver_1_Flt_2", "flag": "0x00000020"},
+  {"error_type": "GateDriver_2_Flt_0", "description": "GateDriver_2_Flt_0", "flag": "0x00000040"},
+  {"error_type": "GateDriver_2_Flt_1", "description": "GateDriver_2_Flt_1", "flag": "0x00000080"},
+  {"error_type": "GateDriver_2_Flt_2", "description": "GateDriver_2_Flt_2", "flag": "0x00000100"},
+  {"error_type": "GateDriver_3_Flt_0", "description": "GateDriver_3_Flt_0", "flag": "0x00000200"},
+  {"error_type": "GateDriver_3_Flt_1", "description": "GateDriver_3_Flt_1", "flag": "0x00000400"},
+  {"error_type": "GateDriver_3_Flt_2", "description": "GateDriver_3_Flt_2", "flag": "0x00000800"},
+  {"error_type": "GateDriver_0_OCD", "description": "GateDriver_0_OCD",   "flag": "0x00001000"},
+  {"error_type": "GateDriver_1_OCD", "description": "GateDriver_1_OCD",   "flag": "0x00002000"},
+  {"error_type": "GateDriver_2_OCD", "description": "GateDriver_2_OCD",   "flag": "0x00004000"},
+  {"error_type": "GateDriver_3_OCD", "description": "GateDriver_3_OCD",   "flag": "0x00008000"},
+  {"error_type": "GateDriver_0_Rdy", "description": "GateDriver_0_Rdy",   "flag": "0x00010000"},
+  {"error_type": "GateDriver_1_Rdy", "description": "GateDriver_1_Rdy",   "flag": "0x00020000"},
+  {"error_type": "GateDriver_2_Rdy", "description": "GateDriver_2_Rdy",   "flag": "0x00040000"},
+  {"error_type": "GateDriver_3_Rdy", "description": "GateDriver_3_Rdy",   "flag": "0x00080000"}
+]

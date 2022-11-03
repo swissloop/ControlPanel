@@ -1,0 +1,218 @@
+/**
+ * @file      app.css
+ * @brief     Cascading Style Sheets for main application
+ *
+ * @author    Philip Wiese, philip.wiese@swissloop.ch
+ * 
+ * @license
+ * Copyright (C) 2022 Swissloop
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * 
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+/*
+* === HEADER ===
+*/
+
+#header {
+    height: 64px;
+    background-color: #DDDDDD;
+    box-shadow: 0 0.5px 1px 0 #9E9E9E;
+}
+
+#header .version {
+    font-size: 8px;
+    color: black;
+    text-align: center;
+    margin-top: -9px;
+}
+
+#header .btn.disabled, #header .btn:disabled {
+    opacity: .30;
+}
+
+.btn-warning.disabled, .btn-warning:disabled {
+    color: white;
+}
+
+/*
+* === FOOTER ===
+*/
+
+#footer {
+    height: 18px;
+    background-color: #DDDDDD;
+    box-shadow: 0 0.5px 1px 0 #9E9E9E;
+    font-size: 12px;
+    vertical-align:middle;
+    color: black;
+}
+
+
+/*
+* === BUTTONS ===
+*/
+
+button {
+    cursor:pointer;
+    text-decoration: none;
+    font-weight: bolder !important;
+}
+
+.btn-warning {
+    color: white;
+}
+
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active {
+    color: white !important;
+}
+
+.btn-orange {
+    color: white;
+    background-color: #ff7500;
+    border-color: #ff7500;
+}
+
+.btn-orange:hover,
+.btn-orange:focus {
+    color: white;
+    background-color: #e86900;
+    background-position: 0 -15px;
+    border-color: #db6200;
+}
+
+.btn-orange:active,
+.btn-orange.active {
+    color: white;
+    background-color: #db6200;
+    border-color: #db6200;
+}
+
+.btn-orange:focus,
+.btn-orange.focus {
+    box-shadow: 0 0 0 .2rem rgba(219, 98, 0, 0.5);
+}
+
+.btn-orange.disabled,
+.btn-orange:disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-empty {
+    cursor: initial !important;
+    border: none !important;
+}
+
+.btn-empty:hover {
+    background: transparent;
+}
+
+/*
+* === PROGRESS BAR ===
+*/
+
+.progress {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bolder;
+}
+.progress-value {
+    position:absolute;
+    right:0;
+    left:0;
+    top:50%;
+}
+
+.bg-run {
+    background-color: #ff7500;
+}
+
+.bg-brake {
+    background-color: #28a745;
+}
+
+/*
+* === PROGRESS BAR ===
+*/
+
+.instrument-row gauge, .instrument-row metric {
+    display: inline-block;
+}
+
+/*
+* === BOOTSTRAP CARDS ===
+*/
+
+.card-columns {
+    display:flex;
+    margin-left: -5px;
+}
+.card-columns .card {
+    margin-left: 5px;
+}
+
+.card-body {
+    padding: 0.5rem;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.card-header {
+    font-weight: bolder;
+    padding: .5rem 1rem;
+}
+
+.card-body button{
+    margin: 5px 0;
+}
+
+#no_connection,
+#loading{
+    width: 10rem;
+    display: block;
+    height: 10rem;
+    position: relative;
+    z-index: -1;
+    top: 50%;
+    margin: 0 auto;
+}
+
+#no_connection.spinner-border,
+#loading.spinner-border{
+    border-width: 1em;
+}
+
+#no_connection_overlay,
+#loading_overlay{
+    position: fixed;
+    z-index:    1000;
+    top:        0;
+    bottom:     0;
+    right:      0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 0, 0, 0, 0.5 );
+    overflow-y: hidden;
+}

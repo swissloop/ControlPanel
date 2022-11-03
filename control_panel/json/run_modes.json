@@ -1,0 +1,5 @@
+[
+  {"description": "OnePulse", "flag": 1},
+  {"description": "TwoPulse", "flag": 2},
+  {"description": "Phase", "flag": 3}
+]

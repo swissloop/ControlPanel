@@ -1,0 +1,35 @@
+[
+  {"error_type": "No Error", "flag": "0x0000",
+    "description": "-"
+  },
+  {"error_type": "GPIO Fault", "flag": "0x0040",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "Chip Fault", "flag": "0x0080",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "SYS Fault", "flag": "0x0100",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "COM Fault", "flag": "0x0200",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "CMP OV Fault", "flag": "0x0400",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "CMP UV Fault", "flag": "0x0800",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "AUX OV Fault", "flag": "0x1000",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "AUX UV Fault", "flag": "0x2000",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "OV Fault", "flag": "0x4000",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  },
+  {"error_type": "UV Fault", "flag": "0x8000",
+    "description": "One or more of the individual fault bits of this type are currently set.\nThese bits always reflect the state of the underlying bits in the other fault registers, which may be\nlatched or not, depending on the setting of the DEVCONFIG[UNLATCHED_FAULT] bit."
+  }
+]

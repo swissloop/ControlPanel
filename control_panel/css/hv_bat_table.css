@@ -1,0 +1,45 @@
+/**
+ * @file      hv_bat_table.css
+ * @brief     Cascading Style Sheets for high voltage battery table
+ *
+ * @author    Philip Wiese, philip.wiese@swissloop.ch
+ * 
+ * @license
+ * Copyright (C) 2022 Swissloop
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * 
+ */
+
+/*
+* === CSS for Error Table ===
+*/
+
+.hv_bat_table {
+    font-size: 12px;
+}
+
+.hv_bat_table tr {
+    text-align: center;
+}
+
+.hv_bat_table tr td:nth-child(1) {
+    font-weight: bold;
+    width:50px;
+    text-align: center;
+}
+
+#battery-voltages-table tr td:last-child {
+    font-weight: bold;
+}

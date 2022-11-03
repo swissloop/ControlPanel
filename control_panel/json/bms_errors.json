@@ -1,0 +1,101 @@
+[
+  {"error_type": "No Error", "flag": "0x00000000",
+    "description": "-"
+  },
+  {"error_type": "Error", "flag": "0x00000001",
+    "description": "Error"
+  },
+  {"error_type": "Invalid Argument", "flag": "0x00000002",
+    "description": "Invalid Argument"
+  },
+  {"error_type": "UART", "flag": "0x00000004",
+    "description": "UART"
+  },
+  {"error_type": "TX Timeout", "flag": "0x00000008",
+    "description": "TX Timeout"
+  },
+  {"error_type": "TX Failed", "flag": "0x00000010",
+    "description": "TX Failed"
+  },
+  {"error_type": "RX Timeout", "flag": "0x00000020",
+    "description": "RX Timeout"
+  },
+  {"error_type": "RX Length Mismatch", "flag": "0x00000040",
+    "description": "RX Length Mismatch"
+  },
+  {"error_type": "RX CRC Mismatch", "flag": "0x00000080",
+    "description": "RX CRC Mismatch"
+  },
+  {"error_type": "No Device", "flag": "0x00000100",
+    "description": "No Device"
+  },
+  {"error_type": "Lost Module", "flag": "0x00000200",
+    "description": "Lost Module"
+  },
+  {"error_type": "Balancing Stopped", "flag": "0x00000400",
+    "description": "Balancing Stopped"
+  },
+  {"error_type": "No Heartbeat from VCU", "flag": "0x00000800",
+    "description": "No Heartbeat from VCU"
+  },
+  {"error_type": "COM Reset", "flag": "0x00001000",
+    "description": "COM Reset"
+  },
+  {"error_type": "Open Wire", "flag": "0x00002000",
+    "description": "Open Wire"
+  },
+  {"error_type": "Not Awake", "flag": "0x00004000",
+    "description": "Not Awake"
+  },
+  {"error_type": "Received Faulty Event from VCU", "flag": "0x00008000",
+    "description": "Received Faulty Event from VCU"
+  },
+  {"error_type": "Overcurrent", "flag": "0x00010000",
+    "description": "Overcurrent"
+  },
+  {"error_type": "Overvoltage", "flag": "0x00020000",
+    "description": "Overvoltage"
+  },
+  {"error_type": "Undervoltage", "flag": "0x00040000",
+    "description": "Undervoltage"
+  },
+  {"error_type": "Overtemperature", "flag": "0x00080000",
+    "description": "Overtemperature"
+  },
+  {"error_type": "Undertemperature", "flag": "0x00100000",
+    "description": "Undertemperature"
+  },
+  {"error_type": "Wrong relay state", "flag": "0x00200000",
+    "description": "Wrong relay state"
+  },
+  {"error_type": "Isolation", "flag": "0x00400000",
+    "description": "Isolation"
+  },
+  {"error_type": "Fault Pin Daisy 1", "flag": "0x00800000",
+    "description": "Fault Pin Daisy 1"
+  },
+  {"error_type": "Fault Pin Daisy 2", "flag": "0x01000000",
+    "description": "Fault Pin Daisy 2"
+  },
+  {"error_type": "Logging Error", "flag": "0x02000000",
+    "description": "Logging Error"
+  },
+  {"error_type": "Charging Error", "flag": "0x04000000",
+    "description": "Charging Error"
+  },
+  {"error_type": "Timeout Error", "flag": "0x08000000",
+    "description": "Timeout Error"
+  },
+  {"error_type": "Overflow Error", "flag": "0x10000000",
+    "description": "Overflow Error"
+  },
+  {"error_type": "External Error", "flag": "0x20000000",
+    "description": "The error is not caused by the BMS"
+  },
+  {"error_type": "LV Error", "flag": "0x40000000",
+    "description": "LV Error"
+  },
+  {"error_type": "Tripactive Error", "flag": "0x80000000",
+    "description": "Tripactive Error"
+  }
+]

@@ -1,0 +1,129 @@
+<!--
+ * @file      logViewer.html
+ * @brief     HTML File for log viewer
+ *
+ * @author    Philip Wiese, philip.wiese@swissloop.ch
+ * 
+ * @license
+ * Copyright (C) 2022 Swissloop
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * 
+ * -->
+
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swissloop Log Viewer</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>const $ = require('jquery');</script>
+    <script>require('popper.js');</script>
+    <script>require('bootstrap');</script>
+
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <link rel="stylesheet" type="text/css" href="../css/logView.css">
+
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';"/>
+</head>
+<body class="h-100">
+
+<div id="header" class="container-fluid sticky-top">
+    <div class="row h-100 justify-content-around p-1 ">
+        <div class="h-100 p-0">
+            <img class="h-100 p-0" src="../img/Swissloop_Logo.svg" alt="Swissloop Logo" />
+            <div class="version ">
+                <script type="text/javascript">document.write(require("../../package.json").version);</script>
+            </div>
+        </div>
+
+        <button id="btn_open_vcu_log" class="col-2 btn btn-light btn-sm p-0" disabled>Open VCU Log</button>
+        <button id="btn_open_controlpanel_log" class="col-2 btn btn-light btn-sm p-0">Open ControlPanel Log</button>
+        <button id="btn_open_inverter_log" class="col-2 btn btn-light btn-sm p-0" disabled>Open Inverter Log</button>
+        <div class="col-2"></div>
+        <button id="btn_close" class="col-2 btn btn-light btn-sm p-0">Close</button>
+    </div>
+</div>
+
+<div id="main" class="container-fluid p-0 mb-4">
+    <div id="loading_overlay" style="display:none;">
+        <div id="loading" class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="card-columns col-12 m-0 p-0 h-100">
+        <div class="card border-dark col-2 m-0 p-0 overflow-auto" id="logView1_chart_legend">
+            <div class="card-body text-dark m-0 pb-0" >
+                <button id="btn_home" type="button" class="btn btn-primary m-1" aria-label="Left Align">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                    </svg>
+                </button>
+                <button id="btn_fit_y" type="button" class="btn btn-secondary m-1" aria-label="Left Align">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrows-expand" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
+                    </svg>
+                </button>
+                <button id="btn_fit_x" type="button" class="btn btn-secondary m-1" aria-label="Left Align">
+                    <svg transform="rotate(-90)" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrows-expand" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="card-body text-dark" id="logView1_groupControlPanel"  >
+                <div class="font-weight-bold w-100" data-toggle="collapse" href="#groupControlPanel" role="button" aria-expanded="false" aria-controls="groupControlPanel">Control Panel</div>
+                <div class="collapse w-100 m-0" id="groupControlPanel">
+                </div>
+            </div>
+            <div class="card-body text-dark" id="logView1_groupVCU"  >
+                <div class="font-weight-bold w-100" data-toggle="collapse" href="#groupVCU" role="button" aria-expanded="false" aria-controls="groupVCU">VCU</div>
+                <div class="collapse w-100 m-0" id="groupVCU">
+
+                </div>
+            </div>
+            <div class="card-body text-dark" id="logView1_groupInverter"  >
+                <div class="font-weight-bold w-100" data-toggle="collapse" href="#groupInverter" role="button" aria-expanded="false" aria-controls="groupInverter">Inverter</div>
+                <div class="collapse w-100 m-0" id="groupInverter">
+
+                </div>
+            </div>
+        </div>
+        <div style="flex: 1 1 auto;" id="logViewChart_1"></div>
+
+
+    </div>
+
+</div>
+
+
+<div id="footer" class="container-fluid fixed-bottom">
+    <div class="row h-100 p">
+        <div class="col-3">Based on Swiss<b>loop</b> Software</div>
+    </div>
+</div>
+
+<!-- Load the Javascript magic! -->
+<!--<script src='js/pod_gui/renderer.js'></script>-->
+<script>require('../js/log_viewer/renderer.js')</script>
+
+</body>
+</html>

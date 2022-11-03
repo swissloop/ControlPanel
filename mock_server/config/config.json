@@ -1,0 +1,9 @@
+{
+    "verbosity": 6,
+    "udp_port_listen": 1337,
+    "udp_host_send": "127.0.0.1",
+    "udp_port_send": 1338,
+    "packet_frequency": 200,
+    "heartbeat_timeout": 500
+}
+

@@ -1,0 +1,101 @@
+[
+  {"error_type": "No Error", "flag": "0x00000000",
+    "description": "-"
+  },
+  {"error_type": "Cell 1 UV", "flag": "0x00000001",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 2 UV", "flag": "0x00000002",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 3 UV", "flag": "0x00000004",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 4 UV", "flag": "0x00000008",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 5 UV", "flag": "0x00000010",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 6 UV", "flag": "0x00000020",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 7 UV", "flag": "0x00000040",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 8 UV", "flag": "0x00000080",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 9 UV", "flag": "0x00000100",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 10 UV", "flag": "0x00000200",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 11 UV", "flag": "0x00000400",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 12 UV", "flag": "0x00000800",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 13 UV", "flag": "0x00001000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 14 UV", "flag": "0x00002000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 15 UV", "flag": "0x00004000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 16 UV", "flag": "0x00008000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 1 OV", "flag": "0x00010000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 2 OV", "flag": "0x00020000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 3 OV", "flag": "0x00040000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 4 OV", "flag": "0x00080000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 5 OV", "flag": "0x00100000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 6 OV", "flag": "0x00200000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 7 OV", "flag": "0x00400000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 8 OV", "flag": "0x00800000",
+    "description": "The stored result for the corresponding battery channel is less than UV_THRES_CELL.\nUV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 9 OV", "flag": "0x01000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 10 OV", "flag": "0x02000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 11 OV", "flag": "0x04000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 12 OV", "flag": "0x08000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 13 OV", "flag": "0x10000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 14 OV", "flag": "0x20000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 15 OV", "flag": "0x40000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  },
+  {"error_type": "Cell 16 OV", "flag": "0x80000000",
+    "description": "The stored result for the corresponding battery channel is greater than\nOV_THRES_CELL. OV_FAULT[0] corresponds to cell 1.\nIf UNLATCHED_FAULT is set, this register is self-clearing."
+  }
+]

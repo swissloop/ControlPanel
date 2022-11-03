@@ -1,0 +1,523 @@
+<!--
+ * @file      podControl.html
+ * @brief     HTML File for main application
+ *
+ * @author    Philip Wiese, philip.wiese@swissloop.ch
+ * 
+ * @license
+ * Copyright (C) 2022 Swissloop
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * 
+ * -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swissloop Control Panel</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>const $ = require('jquery');</script>
+    <script>require('popper.js');</script>
+    <script>require('bootstrap');</script>
+
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <link rel="stylesheet" type="text/css" href="../css/protocol_table.css">
+    <link rel="stylesheet" type="text/css" href="../css/error_table.css">
+    <link rel="stylesheet" type="text/css" href="../css/config_table.css">
+    <link rel="stylesheet" type="text/css" href="../css/hv_bat_table.css">
+    <link rel="stylesheet" type="text/css" href="../css/testing_area.css">
+    <link rel="stylesheet" type="text/css" href="../css/pod.css">
+    <link rel="stylesheet" type="text/css" href="../css/icu.css">
+
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';"/>
+</head>
+<body>
+
+<div id="header" class="container-fluid sticky-top">
+    <div class="row h-100 justify-content-around p-1 ">
+        <div class="h-100 p-0">
+            <img class="h-100 p-0" src="../img/Swissloop_Logo.svg" alt="Swissloop Logo"/>
+            <div class="version ">
+                <script type="text/javascript">document.write(require("../../package.json").version);</script>
+            </div>
+        </div>
+
+        <button id="logViewer_button" class="col-1 btn btn-light btn-sm p-0">Log Viewer <br \>(Alpha)</button>
+        <button id="logging_button" class="col-1 btn btn-light btn-sm p-0">Start Local Logging</button>
+
+        <div class="col-3">
+            <status-display></status-display>
+        </div>
+        <button id="idle_button" class="col-1 btn btn-success btn-sm p-0">IDLE</button>
+        <button id="setup_button" class="col-1 btn btn-secondary btn-sm p-0">SETUP</button>
+        <button id="run_button_modal" class="col-1 btn btn-orange btn-sm p-0" data-toggle="modal" data-target="#runModal">RUN</button>
+        <button id="emergency_stop_button" class="col-1 btn btn-danger btn-sm p-0">EMERGENCY STOP</button>
+        <button id="pod_reset" class="col-1 btn btn-info btn-sm p-0">RESET</button>
+    </div>
+</div>
+
+
+<div id="main" class="container-fluid mb-4">
+    <div id="sound_effects" hidden>
+        <audio controls id="no_connection_music">
+            <source src="../mp3/waiting.mp3" type="audio/mpeg">
+        </audio>
+        <audio controls id="connection_music">
+            <source src="../mp3/connection.mp3" type="audio/mpeg">
+        </audio>
+        <audio controls id="success_music">
+            <source src="../mp3/success.mp3" type="audio/mpeg">
+        </audio>
+        <audio controls id="emergency_music">
+            <source src="../mp3/emergency.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div id="no_connection_overlay">
+        <div id="no_connection" class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="balanceModal" data-backdrop="static" data-keyboard="true" tabindex="-1" aria-labelledby="balanceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="balanceModalLabel">Enable Balancing</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <b>Make sure the inverter is disconnected from the batteries!</b> <br />
+                    The batteries must only be balanced with the appropriate balancing charger and in compliance with the balancing protocol.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Abort</button>
+                    <button type="button" id="bms_balance" class="btn btn-primary">Yes, Balance Batteries</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="runModal" data-backdrop="static" data-keyboard="true" tabindex="-1" aria-labelledby="runModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="runModalLabel"><span class="text-danger font-weight-bolder">Make sure the following values are correct!</span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="runModal_configuration">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th scope="row">Max Voltage</th>
+                            <td id="run_modal_maxvoltage">0 V</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Target Current</th>
+                            <td id="run_modal_targetcurrent">0 A</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Over Current Limit Hi</th>
+                            <td id="run_modal_overcurrentlimithi">0 A</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Run Length</th>
+                            <td id="run_modal_runlength">0 Teeth</td>
+                        </tr>
+                            <th scope="row">Ride Length</th>
+                            <td id="run_modal_ridelength">0 m</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Run Duration</th>
+                            <td id="run_modal_runduration">0 s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Number of Inverters enabled</th>
+                            <td id="run_modal_numInverters">0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Abort</button>
+                    <button type="button" id="run_button" class="btn btn-primary">Start Run</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row p-0">
+        <div class="col-8">
+            <div class="row">
+                <div id="progress_corrail" class="col-12 p-0 progress" style="height: 40px; margin-top: 5px; border-radius: 0;">
+                    <span class="progress-value"> Position: 0 </span>
+                    <div class="bg-run progress-bar" style="width: 50%;"></div>
+                    <div class="bg-brake progress-bar" style="width: 50%;"></div>
+                </div>
+                <object id="pod-svg" class="col-12 col-md-11 h-100 pb-2 pt-2 m-auto" data="../img/Pod.svg" type="image/svg+xml"></object>
+                <!-- <object id="motor-svg" class="col-12 col-md-10 h-100 pb-2 m-auto" data="../img/MotorOverview1-1.svg" type="image/svg+xml"></object> -->
+            </div>
+            <div id="pod_control" class="card-columns row p-0">
+                <div class="card border-dark col p-0">
+                    <div class="card-header border-dark">Battery Management</div>
+                    <div class="card-body justify-content-around text-dark">
+                        <button id="bms_balance_start" class="col-11 btn btn-secondary" data-toggle="modal" data-target="#balanceModal">Balancing</button>
+                        <button disabled id="bms_balance" class="col-11 btn btn-secondary">Balance Enable</button>
+                        <button id="bms_restart_left" class="col-11 btn btn-outline-danger ">BMS Restart Left</button>
+                        <button id="bms_restart_right" class="col-11 btn btn-outline-danger ">BMS Restart Right</button>
+                    </div>
+                </div>
+                <div class="card border-dark col p-0">
+                    <div class="card-header border-dark">Vehicle Control</div>
+                    <div class="card-body justify-content-around text-dark">
+                        <button id="main_brake" class="col-11 btn btn-secondary">Brake Engage</button>
+                        <button id="run_reset" class="col-11 btn btn-primary ">Run Reset</button>
+                        <button id="eject_button" class="col-11 btn btn-secondary">Flush-Card</button>
+                        <button id="vcu_reset" class="col-11 btn btn-outline-danger ">VCU Restart</button>
+                    </div>
+                </div>
+                <div class="card border-dark col p-0">
+                    <div class="card-header border-dark">Inverter Control</div>
+                    <div class="card-body justify-content-around text-dark">
+                        <button id="inverter_adc_calibrate" class="col-11 btn btn-primary ">ADC Calibrate</button>
+                        <button id="inverter_do_foo" class="col-11 btn btn-primary ">Do Foo</button>
+                        <button id="inverter_restart" class="col-11 btn btn-outline-danger ">ICU Restart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <table id="protocol-table" class="table-sm table-striped table-sm">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Min</th>
+                    <th scope="col">Actual</th>
+                    <th scope="col">Max</th>
+                    <th scope="col">Unit</th>
+                </tr>
+                </thead>
+                <tbody id="protocol-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-columns col-12 p-0">
+        <div class="card border-dark col p-0">
+            <div class="card-header border-dark">Errors</div>
+            <div class="card-body text-dark p-0">
+                <table id="error-table" class="table table-striped table-sm m-0">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type</th>
+                        <th scope="col">Error</th>
+                    </tr>
+                    </thead>
+                    <tbody id="error-table-body"></tbody>
+                </table>
+            </div>
+            <!-- State Table right beneath error table --> 
+            <div class="card-header border-dark">States</div>
+            <div class="card-body text-dark p-0">
+                <table id="state-table" class="table table-striped table-sm m-0">
+                    <thead>
+                    <tr>
+                        <th scope="col">System</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Ready</th>
+                    </tr>
+                    </thead>
+                    <tbody id="state-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Use collapsing configs since table is huge  -->
+        <div class="card border-dark col-8 p-0 ">
+            <div class="card-header border-dark"> 
+                Configuration
+            </div>
+            <div id="config-table-collapse">
+                <div class="card-body text-dark p-0">
+                    <table id="config-table" class="table table-striped table-sm mb-0">
+                        <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Current</th>
+                            <th scope="col">Manual</th>
+                            <th scope="col">TX</th>
+                            <th scope="col">Unit</th>
+                        </tr>
+                        </thead>
+                        <tbody id="config-table-body" ></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ICU Table  -->
+    <div class="card-columns col-12 p-0">
+        <div class="card border-dark col-12 p-0">
+            <div class="card-header border-dark">Inverter Board</div>
+            <div class="card-body text-dark p-0 ">
+
+                <table id="icu-vertical-table" class="table table-striped  table-bordered table-sm mb-0 icu_table">
+                    <colgroup span="4"></colgroup>
+                    <tr>
+                        <th style="text-align: center; vertical-align: middle; width: 50px;"" colspan="1">Board:</th>
+                        <th style="text-align: center; vertical-align: middle;" colspan="3">0</th>
+                        <th style="text-align: center; vertical-align: middle;" colspan="3">1</th>
+                        <th style="text-align: center; vertical-align: middle;" colspan="3">2</th>
+                        <th style="text-align: center; vertical-align: middle;" colspan="3">3</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center; vertical-align: middle;">Mosfet:</th>
+                        <th style="text-align: center; vertical-align: middle;">0</th>
+                        <th style="text-align: center; vertical-align: middle;">1</th>
+                        <th style="text-align: center; vertical-align: middle;">2</th>
+                        <th style="text-align: center; vertical-align: middle;">0</th>
+                        <th style="text-align: center; vertical-align: middle;">1</th>
+                        <th style="text-align: center; vertical-align: middle;">2</th>
+                        <th style="text-align: center; vertical-align: middle;">0</th>
+                        <th style="text-align: center; vertical-align: middle;">1</th>
+                        <th style="text-align: center; vertical-align: middle;">2</th>
+                        <th style="text-align: center; vertical-align: middle;">0</th>
+                        <th style="text-align: center; vertical-align: middle;">1</th>
+                        <th style="text-align: center; vertical-align: middle;">2</th>
+                    </tr>
+                    <tbody id="icu-vertical-table-body"></tbody>
+                </table>
+
+
+            </div>
+            <div class="card-header border-dark">FPGA ADC Currents</div>
+            <div class="card-body text-dark p-0 ">
+                <table id="fpga-horizontal-table" class="table table-striped  table-bordered table-sm mb-0 fpga_table">
+                    <tr>
+                        <th>Polepair</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">0</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">1</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">2</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">3</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">4</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">5</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">6</th>
+                        <th style="text-align: center; vertical-align: middle;" scope="col">7</th>
+                    </tr>
+
+                    <tbody id="fpga-horizontal-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <div class="card border-dark col-12 p-0">
+            <div class="card-header border-dark">FPGA </div>
+            <div class="card-body text-dark p-0 ">
+
+                <table class="table table-striped  table-bordered table-sm mb-0 icu_table">
+                    <colgroup span="4"></colgroup>
+                    <tr> Polepair </tr>
+                    <tr >Mosfet 0</tr>
+                    <tr >Mosfet 1</tr>
+                    <tr >Mosfet 2</tr>
+                    <tr >Mosfet 0</tr>
+                    <tr >Mosfet 1</tr>
+                    <tr >Mosfet 2</tr>
+                    <tr >Mosfet 0</tr>
+                    <tr >Mosfet 1</tr>
+                    <tr >Mosfet 2</tr>
+                    <tr >Mosfet 0</tr>
+                    <tr >Mosfet 1</tr>
+                    <tr >Mosfet 2</tr>
+                    <tbody id="fpga-vertical-table-body"></tbody>
+                </table>
+
+
+            </div>
+        </div> -->
+    </div>
+
+    <div class="card-columns col-12 p-0">
+        <div class="card border-dark col-4 p-0">
+            <div class="card-header border-dark">HV Battery Left Temperatures in °C</div>
+            <div class="card-body text-dark p-0 ">
+
+                <table class="table table-striped  table-bordered table-sm mb-0 hv_bat_table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Pack</th>
+                        <th scope="col">Temp 0</th>
+                        <th scope="col">Temp 1</th>
+                        <th scope="col">Temp 2</th>
+                        <th scope="col">Temp 3</th>
+                        <th scope="col">Temp 4</th>
+                        <th scope="col">Temp 5</th>
+                        <th scope="col">Temp 6</th>
+                        <th scope="col">Temp 7</th>
+                    </tr>
+                    </thead>
+                    <tbody id="battery-left-temperatures-table-body"></tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="card border-dark col p-0">
+            <div class="card-header border-dark">HV Battery Left Voltages in V</div>
+            <div class="card-body text-dark p-0 ">
+                <table class="table table-striped table-sm mb-0 table-bordered hv_bat_table" id="battery-left-voltages-table">
+                    <thead>
+                    <tr>
+                        <th  scope="col">Pack</th>
+                        <th  scope="col">Cell 0</th>
+                        <th  scope="col">Cell 1</th>
+                        <th  scope="col">Cell 2</th>
+                        <th  scope="col">Cell 3</th>
+                        <th  scope="col">Cell 4</th>
+                        <th  scope="col">Cell 5</th>
+                        <th  scope="col">Cell 6</th>
+                        <th  scope="col">Cell 7</th>
+                        <th  scope="col">Cell 8</th>
+                        <th  scope="col">Cell 9</th>
+                        <th  scope="col">Cell 10</th>
+                        <th  scope="col">Cell 11</th>
+                        <th  scope="col">Cell 12</th>
+                        <th  scope="col">Cell 13</th>
+                        <th  scope="col">Cell 14</th>
+                        <th  scope="col">Cell 15</th>
+                        <th  scope="col">Sum</th>
+                    </tr>
+                    </thead>
+                    <tbody id="battery-left-voltages-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+    <div class="card-columns col-12 p-0">
+        <div class="card border-dark col-4 p-0">
+            <div class="card-header border-dark">HV Battery Right Temperatures in °C</div>
+            <div class="card-body text-dark p-0 ">
+
+                <table class="table table-striped  table-bordered table-sm mb-0 hv_bat_table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Pack</th>
+                        <th scope="col">Temp 0</th>
+                        <th scope="col">Temp 1</th>
+                        <th scope="col">Temp 2</th>
+                        <th scope="col">Temp 3</th>
+                        <th scope="col">Temp 4</th>
+                        <th scope="col">Temp 5</th>
+                        <th scope="col">Temp 6</th>
+                        <th scope="col">Temp 7</th>
+                    </tr>
+                    </thead>
+                    <tbody id="battery-right-temperatures-table-body"></tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="card border-dark col p-0">
+            <div class="card-header border-dark">HV Battery Right Voltages in V</div>
+            <div class="card-body text-dark p-0 ">
+                <table class="table table-striped table-sm mb-0 table-bordered hv_bat_table" id="battery-right-voltages-table">
+                    <thead>
+                    <tr>
+                        <th  scope="col">Pack</th>
+                        <th  scope="col">Cell 0</th>
+                        <th  scope="col">Cell 1</th>
+                        <th  scope="col">Cell 2</th>
+                        <th  scope="col">Cell 3</th>
+                        <th  scope="col">Cell 4</th>
+                        <th  scope="col">Cell 5</th>
+                        <th  scope="col">Cell 6</th>
+                        <th  scope="col">Cell 7</th>
+                        <th  scope="col">Cell 8</th>
+                        <th  scope="col">Cell 9</th>
+                        <th  scope="col">Cell 10</th>
+                        <th  scope="col">Cell 11</th>
+                        <th  scope="col">Cell 12</th>
+                        <th  scope="col">Cell 13</th>
+                        <th  scope="col">Cell 14</th>
+                        <th  scope="col">Cell 15</th>
+                        <th  scope="col">Sum</th>
+                    </tr>
+                    </thead>
+                    <tbody id="battery-right-voltages-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-2">
+        <div class="card-header p-0">
+            <a class="card-link btn m-0 w-100 text-left" data-toggle="collapse" href="#collapse_testing">Testing</a>
+        </div>
+        <div id="collapse_testing" class="collapse">
+            <div class="card-body">
+                <table class="table table-striped table-sm mb-0 col-12 col-lg-6">
+                    <tbody id ="testing_area_body_ctrl">
+                        <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Current</th>
+                            <th scope="col">Manual</th>
+                            <th scope="col">TX</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                        </thead>
+                    </tbody>
+                </table>
+                <table class="table table-striped table-sm mb-0 col-12 col-lg-6">
+                    <tbody id ="testing_area_body_telemetry">
+                        <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Current</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                        </thead>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+</div>
+
+<div id="footer" class="container-fluid fixed-bottom">
+    <div class="row h-100 p">
+        <div class="col-3">Based on Swiss<b>loop</b> Software</div>
+    </div>
+</div>
+
+<!-- include custom tags -->
+<script type="riot/tag" src="../riot-tags/status-display.tag"></script>
+
+<!-- include riot.js -->
+<script src="../../node_modules/riot/riot+compiler.min.js"></script>
+
+<!-- Load the Javascript magic! -->
+<script>require('../js/pod_gui/renderer.js')</script>
+
+</body>
+</html>

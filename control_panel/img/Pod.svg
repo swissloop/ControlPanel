@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="overview"
+   x="0px"
+   y="0px"
+   viewBox="0 0 763.81755 541.80437"
+   style="font-family:CenturyGothic"
+   sodipodi:docname="Pod.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   width="763.81757"
+   height="541.80438"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview251"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="2.5352963"
+     inkscape:cx="658.70013"
+     inkscape:cy="49.106686"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="speed"
+     fit-margin-top="5"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <style
+     type="text/css"
+     id="style2">
+	.st1{fill:#1D1D1B;}
+	.st2{font-family:'monospace';}
+	.st3{font-size:16px;}
+	.st4{fill:#FFFFFF;}
+	.st6{font-size:17.7802px;}
+	.st9 { 
+    font-weight:bold;
+}
+	.st10{font-size:17.7192px;}
+	.st11{font-size:10.3362px;}
+	.st12{font-size:12px;}
+	.st13{fill:none;stroke:#E20613;stroke-width:3.0706;stroke-miterlimit:6.1413;}
+	.st14{opacity:0.85;fill:#66FF33;enable-background:new;}
+	.st15{font-size:23.8965px;}
+	.st16{font-size:20px;}
+	.st19{font-size:27px;}
+	.st20{font-size:15px;}
+	.st21 { 
+    font-style:italic;
+}
+	.st22{font-size:21px;}
+	.st23{opacity:0.8;fill:#FFFFFF;stroke:#1D1D1B;stroke-width:0.686;stroke-miterlimit:3.43;enable-background:new    ;}
+	.st26{font-family:'ArialMT';}
+	.st27{font-size:9.5186px;}
+</style>
+  <defs
+     id="defs11">
+    <!-- LED glow filter template -->
+    <filter
+       id="f_indicators"
+       x="0"
+       y="0"
+       width="2"
+       height="2">
+      <feOffset
+         result="offOut"
+         in="SourceGraphic"
+         dx="1"
+         dy="1"
+         id="feOffset4" />
+      <feGaussianBlur
+         result="blurOut"
+         in="offOut"
+         stdDeviation="2"
+         id="feGaussianBlur6" />
+      <feBlend
+         in="SourceGraphic"
+         in2="blurOut"
+         mode="normal"
+         id="feBlend8" />
+    </filter>
+  </defs>
+  <g
+     id="motor"
+     transform="translate(-0.1159,-7.2999)">
+    <image
+       style="overflow:visible;enable-background:new"
+       width="2434"
+       height="300"
+       id="motor.image"
+       xlink:href="Motor.jpg"
+       transform="matrix(0.2798,0,0,0.2798,0.1159,427.6222)" />
+    <g
+       id="motor.temp">
+      <text
+         id="motor.temp.1"
+         class="st2 st3"
+         x="56.240021"
+         y="506.1543"
+         style="font-size:11px;text-align:end;text-anchor:end">00 ºC</text>
+      <text
+         id="motor.temp.2"
+         class="st2 st3"
+         x="94.876686"
+         y="506.1543"
+         style="font-size:11px;text-align:end;text-anchor:end"
+         inkscape:label="motor.temp.2">00 ºC</text>
+      <text
+         id="motor.temp.3"
+         class="st2 st3"
+         x="133.51335"
+         y="506.1543"
+         style="font-size:11px;text-align:end;text-anchor:end">00 ºC</text>
+      <text
+         id="motor.temp.4"
+         class="st2 st3"
+         x="221.54002"
+         y="506.1543"
+         style="font-size:11px;text-align:end;text-anchor:end">00 ºC</text>
+      <text
+         id="motor.temp.5"
+         class="st2 st3"
+         x="260.1767"
+         y="506.1543"
+         style="font-size:11px;text-align:end;text-anchor:end">00 ºC</text>
+      <text
+         id="motor.temp.6"
+         class="st2 st3"
+         x="298.81335"
+         y="506.1543"
+         style="font-size:11px;text-align:end;text-anchor:end">00 ºC</text>
+      <text
+         id="motor.temp.7"
+         class="st2 st3"
+         x="337.45001"
+         y="506.1543"
+         style="font-size:11px;text-align:end;text-anchor:end">00 ºC</text>
+    </g>
+    <g
+       id="motor.phase">
+      <rect
+         id="motor.phase.1.b0"
+         x="23.9"
+         y="457.10001"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.1.a0"
+         x="60.900002"
+         y="457.29999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.1.b1"
+         x="97.800003"
+         y="457.29999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.1.a1"
+         x="134.7"
+         y="457.29999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.3.b0"
+         x="189.2"
+         y="457.20001"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.3.a0"
+         x="226.2"
+         y="457.39999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.3.b1"
+         x="263.10001"
+         y="457.39999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.3.a1"
+         x="300"
+         y="457.39999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.2.b0"
+         x="345"
+         y="457.20001"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.2.a0"
+         x="381.89999"
+         y="457.39999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.2.b1"
+         x="418.89999"
+         y="457.39999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.2.a1"
+         x="455.79999"
+         y="457.39999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.0.b0"
+         x="509.70001"
+         y="457.29999"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.0.a0"
+         x="546.59998"
+         y="457.5"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.0.b1"
+         x="583.59998"
+         y="457.5"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+      <rect
+         id="motor.phase.0.a1"
+         x="620.5"
+         y="457.5"
+         class="st4"
+         width="36.900002"
+         height="36.900002"
+         style="opacity:0.7" />
+    </g>
+    <g
+       id="motor.current"
+       transform="translate(0,14)">
+      <text
+         id="motor.current.1b"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,14.3036,534.7651)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">999 A</text>
+      <text
+         id="motor.current.1a"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,52.0895,534.7651)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">080 A</text>
+      <text
+         id="motor.current.3b"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,180.6571,534.7725)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">000 A</text>
+      <text
+         id="motor.current.3a"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,218.4362,534.7729)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">080 A</text>
+      <text
+         id="motor.current.2b"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,340.558,534.7651)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">000 A</text>
+      <text
+         id="motor.current.2a"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,378.3439,534.7651)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">080 A</text>
+      <text
+         id="motor.current.0b"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,508.9416,534.7646)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">000 A</text>
+      <text
+         id="motor.current.0a"
+         transform="matrix(0.867,-0.4983,0.4983,0.867,546.7208,534.7651)"
+         class="st2 st6"
+         x="51.918209"
+         y="0"
+         style="text-align:end;text-anchor:end">080 A</text>
+    </g>
+    <g
+       id="motor.labels">
+      <text
+         transform="translate(92.7037,428.2588)"
+         class="st1 st9 st10"
+         id="text48">1</text>
+      <text
+         transform="translate(415.2964,426.9082)"
+         class="st1 st9 st10"
+         id="text50">2</text>
+      <text
+         transform="translate(262.3501,427.5205)"
+         class="st1 st9 st10"
+         id="text52">3</text>
+      <text
+         transform="translate(579.8707,426.7822)"
+         class="st1 st9 st10"
+         id="text54">0</text>
+      <text
+         transform="translate(631.9507,442.4932)"
+         class="st1 st2 st11"
+         id="text56">A-</text>
+      <text
+         transform="translate(596.2095,442.2197)"
+         class="st1 st2 st11"
+         id="text58">B-</text>
+      <text
+         transform="translate(560.0396,442.2197)"
+         class="st1 st2 st11"
+         id="text60">A+</text>
+      <text
+         transform="translate(524.9781,442.2197)"
+         class="st1 st2 st11"
+         id="text62">B+</text>
+      <text
+         transform="translate(470.0708,442.7588)"
+         class="st1 st2 st11"
+         id="text64">A-</text>
+      <text
+         transform="translate(434.3296,442.4932)"
+         class="st1 st2 st11"
+         id="text66">B-</text>
+      <text
+         transform="translate(398.1607,442.4932)"
+         class="st1 st2 st11"
+         id="text68">A+</text>
+      <text
+         transform="translate(363.0914,442.4932)"
+         class="st1 st2 st11"
+         id="text70">B+</text>
+      <text
+         transform="translate(309.3506,442.626)"
+         class="st1 st2 st11"
+         id="text72">A-</text>
+      <text
+         transform="translate(273.6021,442.3525)"
+         class="st1 st2 st11"
+         id="text74">B-</text>
+      <text
+         transform="translate(237.44,442.3525)"
+         class="st1 st2 st11"
+         id="text76">A+</text>
+      <text
+         transform="translate(202.3707,442.3525)"
+         class="st1 st2 st11"
+         id="text78">B+</text>
+      <text
+         transform="translate(151.2662,442.0205)"
+         class="st1 st2 st12"
+         id="text80">A-</text>
+      <text
+         transform="translate(115.5249,441.7549)"
+         class="st1 st2 st11"
+         id="text82">B-</text>
+      <text
+         transform="translate(79.3555,441.7549)"
+         class="st1 st2 st11"
+         id="text84">A+</text>
+      <text
+         transform="translate(44.2935,441.7549)"
+         class="st1 st2 st11"
+         id="text86">B+</text>
+    </g>
+    <g
+       id="marker.left.arrow-7"
+       transform="matrix(0,0.0303037,-0.0303037,0,20.580671,463.52437)"
+       style="font-family:CenturyGothic"
+       inkscape:label="motor.marker.arrow">
+      <path
+         d="M 480,344.181 268.869,131.889 c -15.756,-15.859 -41.3,-15.859 -57.054,0 -15.754,15.857 -15.754,41.57 0,57.431 l 237.632,238.937 c 8.395,8.451 19.562,12.254 30.553,11.698 10.993,0.556 22.159,-3.247 30.555,-11.698 L 748.186,189.32 c 15.756,-15.86 15.756,-41.571 0,-57.431 -15.756,-15.86 -41.299,-15.859 -57.051,0 z"
+         id="path2-5" />
+    </g>
+  </g>
+  <g
+     id="pod"
+     transform="matrix(0.85,0,0,0.85,449.8841,82.7001)">
+    <g
+       id="pod.topview">
+      <image
+         style="overflow:visible;enable-background:new"
+         width="6925"
+         height="3123"
+         id="topview.image"
+         xlink:href="Pod_top.png"
+         transform="matrix(0.1153,0,0,0.1153,-526.4584,-0.02929659)" />
+      <path
+         id="isolation"
+         class="st13"
+         d="m 260.3,180 v 141 c 0,7.5 -6.1,13.6 -13.6,13.6 H 136.5 c -6,0 -11.3,3.9 -13,9.6 l -1.9,6.1 c -1.7,5.7 -7,9.6 -13,9.6 h -503.8 c -6,0 -11.3,-3.9 -13,-9.7 l -2.4,-7.8 c -1.7,-5.7 -7,-9.7 -13,-9.7 h -89.3 c -7.5,0 -13.6,-6.1 -13.6,-13.6 V 180 40.8 c 0,-7.5 6.1,-13.6 13.6,-13.6 h 89.3 c 6,0 11.3,-3.9 13,-9.7 l 2.4,-7.8 c 1.7,-5.7 7,-9.7 13,-9.7 h 503.8 c 6,0 11.3,3.9 13,9.6 l 1.9,6.1 c 1.7,5.7 7,9.6 13,9.6 h 110.3 c 7.5,0 13.6,6.1 13.6,13.6 V 180 Z" />
+    </g>
+    <g
+       id="pod.hv">
+      <g
+         id="hv.bat_l">
+        <path
+           id="hv.bat_l.background"
+           class="st14"
+           d="M 128.3,285.9 H -467 c -5.5,0 -10,-4.5 -10,-10 v -33.4 c 0,-5.5 4.5,-10 10,-10 h 595.3 c 5.5,0 10,4.5 10,10 v 33.4 c 0,5.5 -4.5,10 -10,10 z" />
+        <text
+           id="hv.bat_l.current"
+           class="st2 st15"
+           x="120.99708"
+           y="269.65469"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+        <text
+           id="hv.bat_l.voltage"
+           class="st2 st15"
+           x="-23.080814"
+           y="269.65479"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">---.- --</text>
+        <text
+           id="hv.bat_l.temp"
+           class="st2 st15"
+           x="-286.91891"
+           y="269.65521"
+           style="stroke-width:1.1765">--.- --</text>
+        <text
+           id="hv.bat_l.state"
+           transform="matrix(1.1765,0,0,1.1765,-458.8447,269.6553)"
+           class="st9 st15">READY</text>
+      </g>
+      <g
+         id="hv.bat_r">
+        <path
+           id="hv.bat_r.background"
+           class="st14"
+           d="m 128.9,132.3 h -595.3 c -5.5,0 -10,-4.5 -10,-10 V 88.8 c 0,-5.5 4.5,-10 10,-10 h 595.3 c 5.5,0 10,4.5 10,10 v 33.4 c 0,5.6 -4.5,10.1 -10,10.1 z" />
+        <text
+           id="hv.bat_r.current"
+           class="st2 st15"
+           x="121.58527"
+           y="116.0671"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+        <text
+           id="hv.bat_r.voltage"
+           class="st2 st15"
+           x="-22.492634"
+           y="116.0672"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">---.- --</text>
+        <text
+           id="hv.bat_r.temp"
+           class="st2 st15"
+           x="-286.3306"
+           y="116.0676"
+           style="stroke-width:1.1765">--.- --</text>
+        <text
+           id="hv.bat_r.state"
+           transform="matrix(1.1765,0,0,1.1765,-458.2565,116.0677)"
+           class="st9 st15">READY</text>
+      </g>
+    </g>
+    <g
+       id="pod.inverter">
+      <g
+         id="inverter.4">
+        <path
+           id="inverter.4.background"
+           class="st14"
+           d="m 197.1,223.1 h -92.3 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 92.3 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.5,10 -10,10 z" />
+        <text
+           id="inverter.4.temp"
+           class="st2 st16"
+           x="198.31961"
+           y="217.8219"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+        <text
+           id="inverter.4.power"
+           class="st2 st16"
+           x="198.31961"
+           y="191.0258"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.-- --</text>
+        <text
+           id="inverter.4.voltage"
+           class="st2 st16"
+           x="198.31961"
+           y="164.2303"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- -</text>
+      </g>
+      <g
+         id="inverter.3">
+        <path
+           id="inverter.3.background"
+           class="st14"
+           d="m 72.1,223.1 h -92.3 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 92.3 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.5,10 -10,10 z" />
+        <text
+           id="inverter.3.temp"
+           class="st2 st16"
+           x="71.312988"
+           y="217.8219"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+        <text
+           id="inverter.3.power"
+           class="st2 st16"
+           x="71.312988"
+           y="191.0258"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.-- --</text>
+        <text
+           id="inverter.3.voltage"
+           class="st2 st16"
+           x="71.312988"
+           y="164.2303"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+      </g>
+      <g
+         id="inverter.2">
+        <path
+           id="inverter.2.background"
+           class="st14"
+           d="m -268.8,223.1 h -92.3 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 92.3 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.4,10 -10,10 z" />
+        <text
+           id="inverter.2.temp"
+           class="st2 st16"
+           x="-269.55191"
+           y="217.8219"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+        <text
+           id="inverter.2.power"
+           class="st2 st16"
+           x="-269.55191"
+           y="191.0258"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.-- --</text>
+        <text
+           id="inverter.2.voltage"
+           class="st2 st16"
+           x="-269.55191"
+           y="164.2303"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+      </g>
+      <g
+         id="inverter.1">
+        <path
+           id="inverter.1.background"
+           class="st14"
+           d="m -393.3,223.1 h -92.3 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 92.3 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.5,10 -10,10 z" />
+        <text
+           id="inverter.1.temp"
+           class="st2 st16"
+           x="-392.49832"
+           y="217.8219"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+        <text
+           id="inverter.1.power"
+           class="st2 st16"
+           x="-392.49832"
+           y="191.0258"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.-- --</text>
+        <text
+           id="inverter.1.voltage"
+           class="st2 st16"
+           x="-392.49832"
+           y="164.2303"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--.- --</text>
+      </g>
+    </g>
+    <g
+       id="pod.lv">
+      <g
+         id="lv.2">
+        <path
+           id="lv.2.background"
+           class="st14"
+           d="m -97.5,223.1 h -143.9 c -5.5,0 -10,-4.5 -10,-10 v -13.8 c 0,-5.5 4.5,-10 10,-10 h 143.9 c 5.5,0 10,4.5 10,10 v 13.8 c 0,5.5 -4.5,10 -10,10 z" />
+        <text
+           id="lv.2.current"
+           class="st2 st16"
+           x="-157.59361"
+           y="214.9949"
+           style="stroke-width:1.1765">-.- -</text>
+        <text
+           id="lv.2.voltage"
+           class="st2 st16"
+           x="-242.90598"
+           y="214.995"
+           style="stroke-width:1.1765">--.- -</text>
+      </g>
+      <g
+         id="lv.1">
+        <path
+           id="lv.1.background"
+           class="st14"
+           d="m -97.5,174.2 h -143.9 c -5.5,0 -10,-4.5 -10,-10 v -13.8 c 0,-5.5 4.5,-10 10,-10 h 143.9 c 5.5,0 10,4.5 10,10 v 13.8 c 0,5.5 -4.5,10 -10,10 z" />
+        <text
+           id="lv.1.current"
+           class="st2 st16"
+           x="-157.59361"
+           y="166.14349"
+           style="stroke-width:1.1765">-.- -</text>
+        <text
+           id="lv.1.voltage"
+           class="st2 st16"
+           x="-242.90598"
+           y="166.1436"
+           style="stroke-width:1.1765">--.- -</text>
+      </g>
+    </g>
+    <g
+       id="pod.icu">
+      <path
+         id="icu.background"
+         class="st14"
+         d="m -45.9,223.1 h -22.6 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 22.6 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.4,10 -10,10 z" />
+      <text
+         id="icu.label"
+         transform="matrix(0,-1.1765,1.1765,0,-49.4282,201.7128)"
+         class="st9 st16">ICU</text>
+    </g>
+    <g
+       id="pod.brake">
+      <g
+         id="brake.tank"
+         transform="translate(290.92199,-0.80288232)">
+        <path
+           id="tank.background"
+           class="st14"
+           d="m -45.9,234.74245 h -22.6 c -5.5,0 -10,-5.76701 -10,-12.81559 v -80.35372 c 0,-7.04858 4.5,-12.81559 10,-12.81559 h 22.6 c 5.5,0 10,5.76701 10,12.81559 v 80.35372 c 0,7.04858 -4.4,12.81559 -10,12.81559 z"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.13206" />
+        <text
+           id="tank.pressure"
+           transform="rotate(-90)"
+           class="st2 st16"
+           x="-140.09624"
+           y="-51.781139"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">--- bar</text>
+      </g>
+      <g
+         id="brake.r.action"
+         transform="rotate(90,143.75929,250.93736)">
+        <path
+           id="brake.r.action.background"
+           class="st14"
+           d="m -45.9,223.1 h -22.6 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 22.6 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.4,10 -10,10 z"
+           style="fill:#ffffff;fill-opacity:1" />
+        <text
+           id="brake.r.action.pressure"
+           transform="rotate(-90)"
+           class="st2 st16"
+           x="-145.03745"
+           y="-51.781139"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">-- bar</text>
+      </g>
+      <g
+         id="brake.r.release"
+         transform="rotate(90,120.68335,274.0133)">
+        <path
+           id="brake.r.release.background"
+           class="st14"
+           d="m -45.9,223.1 h -22.6 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 22.6 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.4,10 -10,10 z"
+           style="fill:#ffffff;fill-opacity:1" />
+        <text
+           id="brake.r.release.pressure"
+           transform="rotate(-90)"
+           class="st2 st16"
+           x="-145.03745"
+           y="-51.781139"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">-- bar</text>
+      </g>
+      <g
+         id="brake.l.action"
+         transform="rotate(90,36.594991,358.10166)">
+        <path
+           id="brake.l.action.background"
+           class="st14"
+           d="m -45.9,223.1 h -22.6 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 22.6 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.4,10 -10,10 z"
+           style="fill:#ffffff;fill-opacity:1" />
+        <text
+           id="brake.l.action.pressure"
+           transform="rotate(-90)"
+           class="st2 st16"
+           x="-145.03745"
+           y="-51.781139"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">-- bar</text>
+      </g>
+      <g
+         id="brake.l.release"
+         transform="rotate(90,13.519051,381.1776)">
+        <path
+           id="brake.l.release.background"
+           class="st14"
+           d="m -45.9,223.1 h -22.6 c -5.5,0 -10,-4.5 -10,-10 v -62.7 c 0,-5.5 4.5,-10 10,-10 h 22.6 c 5.5,0 10,4.5 10,10 v 62.7 c 0,5.5 -4.4,10 -10,10 z"
+           style="fill:#ffffff;fill-opacity:1" />
+        <text
+           id="brake.l.release.pressure"
+           transform="rotate(-90)"
+           class="st2 st16"
+           x="-145.03745"
+           y="-51.781139"
+           style="text-align:end;text-anchor:end;stroke-width:1.1765">-- bar</text>
+      </g>
+    </g>
+    <g
+       id="pod.marker">
+      <text
+         id="marker.right.text"
+         class="st9 st15"
+         x="-467.47989"
+         y="15.5602"
+         style="stroke-width:1.1765">R</text>
+      <text
+         id="marker.left.text"
+         class="st9 st15"
+         x="-467.47989"
+         y="363.69241"
+         style="stroke-width:1.1765">L</text>
+      <g
+         id="marker.left.arrow"
+         transform="matrix(0,0.03565141,-0.03565141,0,-476.03978,338.04864)">
+        <path
+           d="M 480,344.181 268.869,131.889 c -15.756,-15.859 -41.3,-15.859 -57.054,0 -15.754,15.857 -15.754,41.57 0,57.431 l 237.632,238.937 c 8.395,8.451 19.562,12.254 30.553,11.698 10.993,0.556 22.159,-3.247 30.555,-11.698 L 748.186,189.32 c 15.756,-15.86 15.756,-41.571 0,-57.431 -15.756,-15.86 -41.299,-15.859 -57.051,0 z"
+           id="path2" />
+      </g>
+      <g
+         id="marker.right.arrow"
+         transform="matrix(0,0.03565141,-0.03565141,0,-476.03978,-10.083572)"
+         style="font-family:CenturyGothic">
+        <path
+           d="M 480,344.181 268.869,131.889 c -15.756,-15.859 -41.3,-15.859 -57.054,0 -15.754,15.857 -15.754,41.57 0,57.431 l 237.632,238.937 c 8.395,8.451 19.562,12.254 30.553,11.698 10.993,0.556 22.159,-3.247 30.555,-11.698 L 748.186,189.32 c 15.756,-15.86 15.756,-41.571 0,-57.431 -15.756,-15.86 -41.299,-15.859 -57.051,0 z"
+           id="path2-9" />
+      </g>
+    </g>
+  </g>
+  <g
+     id="speed"
+     transform="translate(-0.1159,-7.2999)">
+    <text
+       id="speed.velocity"
+       class="st2 st19"
+       x="576.2796"
+       y="32.044399"
+       style="text-align:end;text-anchor:end">00.0 m/s</text>
+    <text
+       id="speed.velocity.max.session"
+       class="st2 st20"
+       x="591.22369"
+       y="84.556602">00.0 m/s</text>
+    <text
+       id="speed.velocity.max.session.kmh"
+       class="st2 st20"
+       x="591.22369"
+       y="99.556602">00.0 km/h</text>
+    <text
+       id="power.real.max.session"
+       class="st2 st20"
+       x="683.35339"
+       y="84.556602">00.0 kW</text>
+    <text
+       id="power.reactive.max.session"
+       class="st2 st20"
+       x="683.35339"
+       y="99.556602">00.0 kvar</text>
+    <text
+       id="speed.velocity.max.run"
+       class="st2 st20"
+       x="591.22339"
+       y="38.730598">00.0 m/s</text>
+    <text
+       id="speed.velocity.max.run.kmh"
+       class="st2 st20"
+       x="591.22339"
+       y="53.730598">00.0 km/h</text>
+    <text
+       id="speed.label1"
+       class="st21 st12 st9"
+       x="591.23572"
+       y="20.3076"><tspan
+         id="tspan65054">Max. Run</tspan></text>
+    <text
+       id="speed.label2"
+       class="st21 st12 st9"
+       x="591.23499"
+       y="69.004005"><tspan
+         id="tspan64344">Max. Session</tspan></text>
+    <text
+       id="speed.distance"
+       class="st2 st22"
+       x="566.61377"
+       y="66.213799"
+       style="text-align:end;text-anchor:end">000.0 m</text>
+  </g>
+  <g
+     id="indicators"
+     transform="matrix(0.7,0,0,0.7,589.8841,12.7001)"
+     inkscape:label="indicators">
+    <path
+       class="st23"
+       d="m -240.6,74.3 h -580 c -6.7,0 -12.1,-5.4 -12.1,-12.1 V -5.7 c 0,-6.7 5.4,-12.1 12.1,-12.1 h 580 c 6.7,0 12.1,5.4 12.1,12.1 v 67.9 c 0.1,6.6 -5.4,12.1 -12.1,12.1 z"
+       id="path154" />
+    <g
+       id="indicators.emg"
+       transform="translate(-300)"
+       stroke="none"
+       fill="#ff0000">
+      <path
+         id="indicators.emg.anim"
+         d="m -481.7,-7.2 -27.2,48.4 c 0.8,2.9 3.1,5.2 5.9,5.9 h 51 c 2.9,-0.8 5.2,-3.1 5.9,-5.9 l -27.2,-48.4 c -2.5,-1.5 -5.8,-1.5 -8.4,0"
+         stroke="none"
+         fill="#ffa500" />
+      <animate
+         accumulate="none"
+         additive="replace"
+         attributeName="fill"
+         begin="indefinite"
+         calcMode="discrete"
+         dur="1.2s"
+         fill="remove"
+         href="#indicators.emg.anim"
+         id="indicators.emg.animation"
+         repeatCount="indefinite"
+         restart="whenNotActive"
+         values="ffea96;orange;" />
+      <g
+         id="g160">
+        <g
+           id="t_indicator"
+           transform="matrix(0.15,0,0,0.15,1.5,0)">
+          <path
+             d="m -2980.7,267.6 -178.5,-323.1 c -6.7,-12.1 -19.4,-19.6 -33.2,-19.6 h -2.3 c -13.8,0 -26.5,7.5 -33.2,19.6 l -178.5,323.1 c -3.1,5.6 -4.7,11.9 -4.7,18.3 0,20.9 17,37.9 37.9,37.9 h 359.4 c 20.9,0 37.9,-17 37.9,-37.9 -0.1,-6.4 -1.7,-12.7 -4.8,-18.3 z m -33.2,38 h -359.4 c -10.9,0 -19.8,-8.9 -19.8,-19.8 0,-3.3 0.8,-6.6 2.5,-9.6 l 178.5,-323.1 c 3.5,-6.3 10.1,-10.2 17.3,-10.2 h 2.3 c 7.2,0 13.8,3.9 17.3,10.2 l 178.5,323.1 c 1.6,2.9 2.5,6.2 2.5,9.6 0.1,11 -8.8,19.8 -19.7,19.8 z"
+             id="path157" />
+        </g>
+      </g>
+      <g
+         transform="matrix(0.6,0,0,0.6,15.75,20)"
+         id="g165">
+        <g
+           id="t_indicator_00000092437492485864187900000000979441991789763713_"
+           transform="matrix(0.15,0,0,0.15,1.5,0)">
+          <path
+             d="m -5363.1,118.6 -107.1,-193.9 c -4,-7.2 -11.6,-11.7 -19.9,-11.7 h -1.4 c -8.3,0 -15.9,4.5 -19.9,11.7 l -107.1,193.9 c -1.9,3.4 -2.8,7.2 -2.8,11 0,12.5 10.2,22.7 22.7,22.7 h 215.6 c 12.5,0 22.7,-10.2 22.7,-22.7 0.1,-3.9 -0.9,-7.7 -2.8,-11 z m -19.9,22.8 h -215.6 c -6.5,0 -11.9,-5.3 -11.9,-11.9 0,-2 0.5,-4 1.5,-5.7 L -5501.8,-70 c 2.1,-3.8 6.1,-6.1 10.4,-6.1 h 1.4 c 4.3,0 8.3,2.3 10.4,6.1 l 107.1,193.9 c 1,1.8 1.5,3.7 1.5,5.7 -0.1,6.5 -5.4,11.8 -12,11.8 z"
+             id="path162" />
+        </g>
+      </g>
+      <g
+         transform="matrix(0.4,0,0,0.4,23.75,30)"
+         id="g170">
+        <g
+           id="t_indicator_00000010291272226990833920000010646545023208028832_"
+           transform="matrix(0.15,0,0,0.15,1.5,0)">
+          <path
+             d="m -8279.4,-25.8 -71.4,-129.3 c -2.7,-4.8 -7.8,-7.8 -13.3,-7.8 h -0.9 c -5.5,0 -10.6,3 -13.3,7.8 l -71.4,129.2 c -1.2,2.2 -1.9,4.8 -1.9,7.3 0,8.4 6.8,15.2 15.2,15.2 h 143.7 c 8.4,0 15.2,-6.8 15.2,-15.2 0,-2.5 -0.7,-5 -1.9,-7.2 z m -13.3,15.2 h -143.7 c -4.4,0 -7.9,-3.5 -7.9,-7.9 0,-1.3 0.3,-2.7 1,-3.8 l 71.4,-129.2 c 1.4,-2.5 4,-4.1 6.9,-4.1 h 0.9 c 2.9,0 5.5,1.6 6.9,4.1 l 71.4,129.2 c 0.6,1.2 1,2.5 1,3.8 0,4.3 -3.5,7.9 -7.9,7.9 z"
+             id="path167" />
+        </g>
+      </g>
+      <text
+         transform="matrix(1.4286,0,0,1.4286,-492.9391,63.858)"
+         class="st25 st26 st27"
+         id="text172">EMG</text>
+    </g>
+    <g
+       id="indicators.lv"
+       transform="translate(-200)">
+      <g
+         id="g182">
+        <g
+           id="t_indicator_lv"
+           transform="matrix(0.12,0,0,0.12,6.5,8)">
+          <path
+             d="m -3919.6,-39.5 h -43.5 V -54 c 0,-8 -6.5,-14.5 -14.5,-14.5 h -58.1 c -8,0 -14.5,6.5 -14.5,14.5 v 14.5 h -174.2 V -54 c 0,-8 -6.5,-14.5 -14.5,-14.5 h -58.1 c -8,0 -14.5,6.5 -14.5,14.5 v 14.5 h -43.5 c -8,0 -14.5,6.5 -14.5,14.5 v 290.3 c 0,8 6.5,14.5 14.5,14.5 h 435.5 c 8,0 14.5,-6.5 14.5,-14.5 V -24.9 c 0,-8.1 -6.5,-14.6 -14.6,-14.6 z m -14.5,290.4 h -406.4 V -10.4 h 406.4 z"
+             id="path175" />
+          <path
+             d="m -4282.4,105.7 h 29 v -29 h 29 v -29 h -29 v -29 h -29 v 29 h -29 v 29 h 29 z"
+             id="path177" />
+          <path
+             d="m -4050.2,47.6 h 87.1 v 29 h -87.1 z"
+             id="path179" />
+        </g>
+      </g>
+      <text
+         transform="matrix(1.4286,0,0,1.4286,-497.1844,63.858)"
+         class="st25 st26 st27"
+         id="text184">LV</text>
+    </g>
+    <g
+       id="indicators.brake"
+       transform="translate(-100)">
+      <g
+         id="g190">
+        <g
+           id="t_indicator_brake"
+           transform="matrix(0.125,0,0,0.125,7.5,20)">
+          <path
+             d="m -4276.6,171.8 c -41.1,-41.1 -63.7,-95.7 -63.7,-153.8 0,-58.1 22.6,-112.8 63.7,-153.8 l 24,24 c -34.7,34.7 -53.8,80.8 -53.8,129.8 0,49 19.1,95.1 53.8,129.8 z m 371.4,-153.9 c 0,-58.1 -22.6,-112.8 -63.7,-153.8 l -24,24 c 34.7,34.7 53.8,80.8 53.8,129.8 0,49 -19.1,95.1 -53.8,129.8 l 24,24 c 41,-41 63.7,-95.6 63.7,-153.8 z m -68,0.9 c 0,-82.5 -67.1,-149.6 -149.6,-149.6 -82.5,0 -149.6,67.1 -149.6,149.6 0,82.5 67.1,149.6 149.6,149.6 82.5,0 149.6,-67.1 149.6,-149.6 z m -34,0 c 0,63.7 -51.9,115.6 -115.6,115.6 -63.7,0 -115.6,-51.9 -115.6,-115.6 0,-63.7 51.9,-115.6 115.6,-115.6 63.7,0.1 115.6,51.9 115.6,115.6 z m -98.6,47.6 h -34 v 34 h 34 z m 0,-129.2 h -34 V 40.1 h 34 z"
+             id="path187" />
+        </g>
+      </g>
+      <text
+         transform="matrix(1.4286,0,0,1.4286,-530.4727,63.858)"
+         class="st25 st26 st27"
+         id="text192">BRAKE</text>
+    </g>
+    <g
+       id="indicators.temperature"
+       transform="translate(100)">
+      <g
+         id="g208">
+        <g
+           id="t_indicator_temp"
+           transform="matrix(0.1,0,0,0.1,24,15)">
+          <path
+             d="M -6607.6,119.8 V -48.3 c 0,-7 -5.7,-12.7 -12.7,-12.7 -7,0 -12.7,5.7 -12.7,12.7 v 168.1 c -22.4,5.7 -39,26 -39,50.2 0,28.6 23.2,51.8 51.8,51.8 28.6,0 51.8,-23.2 51.8,-51.8 -0.1,-24.2 -16.8,-44.5 -39.2,-50.2 z m -12.7,76.5 c -14.5,0 -26.3,-11.8 -26.3,-26.3 0,-14.5 11.8,-26.3 26.3,-26.3 14.5,0 26.3,11.8 26.3,26.3 0,14.5 -11.8,26.3 -26.3,26.3 z"
+             id="path195" />
+          <path
+             d="M -6557,89 V -99.1 c 0,-34.9 -28.4,-63.3 -63.3,-63.3 -34.9,0 -63.3,28.4 -63.3,63.3 V 89 c -24.9,19.4 -39.5,49.2 -39.5,81 0,56.7 46.1,102.8 102.8,102.8 56.7,0 102.8,-46.1 102.8,-102.8 0,-31.8 -14.7,-61.6 -39.5,-81 z m -63.3,158.3 c -42.6,0 -77.3,-34.7 -77.3,-77.3 0,-25.6 12.7,-49.6 33.9,-64 3.5,-2.4 5.6,-6.3 5.6,-10.5 V -99.1 c 0,-20.8 16.9,-37.8 37.8,-37.8 20.8,0 37.8,16.9 37.8,37.8 V 95.4 c 0,4.2 2.1,8.2 5.6,10.5 21.2,14.4 33.9,38.4 33.9,64 0,42.7 -34.7,77.4 -77.3,77.4 z"
+             id="path197" />
+          <path
+             d="m -6479.3,41.2 h -39.5 c -7,0 -12.7,5.7 -12.7,12.7 0,7 5.7,12.7 12.7,12.7 h 39.5 c 7,0 12.7,-5.7 12.7,-12.7 0,-7 -5.6,-12.7 -12.7,-12.7 z"
+             id="path199" />
+          <path
+             d="m -6479.3,-9.8 h -39.5 c -7,0 -12.7,5.7 -12.7,12.7 0,7 5.7,12.7 12.7,12.7 h 39.5 c 7,0 12.7,-5.7 12.7,-12.7 0,-7 -5.6,-12.7 -12.7,-12.7 z"
+             id="path201" />
+          <path
+             d="m -6479.3,-60.8 h -39.5 c -7,0 -12.7,5.7 -12.7,12.7 0,7 5.7,12.7 12.7,12.7 h 39.5 c 7,0 12.7,-5.7 12.7,-12.7 0,-7 -5.6,-12.7 -12.7,-12.7 z"
+             id="path203" />
+          <path
+             d="m -6518.8,-86.3 h 39.5 c 7,0 12.7,-5.7 12.7,-12.7 0,-7 -5.7,-12.7 -12.7,-12.7 h -39.5 c -7,0 -12.7,5.7 -12.7,12.7 0,6.9 5.7,12.7 12.7,12.7 z"
+             id="path205" />
+        </g>
+      </g>
+      <text
+         transform="matrix(1.4286,0,0,1.4286,-653.5928,63.858)"
+         class="st25 st26 st27"
+         id="text210">TEMP</text>
+    </g>
+    <g
+       id="indicators.hv"
+       transform="translate(200)">
+      <g
+         id="g216">
+        <g
+           id="t_indicator_00000046313998421801514570000001518860100681784763_"
+           transform="matrix(0.15,0,0,0.15,1.5,0)">
+          <path
+             d="m -4173,267.6 -178.5,-323.1 c -6.7,-12.1 -19.4,-19.6 -33.2,-19.6 h -2.3 c -13.8,0 -26.5,7.5 -33.2,19.6 l -178.5,323.1 c -3.1,5.6 -4.7,11.9 -4.7,18.3 0,20.9 17,37.9 37.9,37.9 h 359.4 c 20.9,0 37.9,-17 37.9,-37.9 0,-6.4 -1.7,-12.7 -4.8,-18.3 z m -33.1,38 h -359.4 c -10.9,0 -19.8,-8.9 -19.8,-19.8 0,-3.3 0.9,-6.6 2.5,-9.6 l 178.5,-323.1 c 3.5,-6.3 10.1,-10.2 17.3,-10.2 h 2.3 c 7.2,0 13.8,3.9 17.3,10.2 l 178.5,323.1 c 1.6,2.9 2.5,6.2 2.5,9.6 0,11 -8.8,19.8 -19.7,19.8 z"
+             id="path213" />
+        </g>
+      </g>
+      <g
+         id="g221">
+        <g
+           id="t_indicator_hv"
+           transform="matrix(0.15,0,0,0.15,1.5,0)">
+          <path
+             d="m -4322.3,142.5 h -41 l 31.3,-78.2 c 1.1,-2.8 0.8,-6 -0.9,-8.4 -1.7,-2.5 -4.5,-4 -7.5,-4 h -63.5 c -3.8,0 -7.2,2.4 -8.5,6 l -45.3,126.9 c -1,2.8 -0.6,5.9 1.1,8.3 1.7,2.4 4.5,3.8 7.4,3.8 h 41 l -31.3,78.2 c -1.6,4.1 -0.1,8.8 3.7,11.1 1.5,0.9 3.1,1.3 4.7,1.3 2.6,0 5.1,-1.1 6.9,-3.2 l 108.8,-126.9 c 2.3,-2.7 2.8,-6.5 1.3,-9.7 -1.5,-3.2 -4.7,-5.2 -8.2,-5.2 z m -80.1,88.5 15.9,-39.8 c 1.1,-2.8 0.8,-6 -0.9,-8.4 -1.7,-2.5 -4.5,-4 -7.5,-4 h -41.5 L -4397.6,70 h 43.7 l -31.3,78.2 c -1.1,2.8 -0.8,6 0.9,8.4 1.7,2.5 4.5,4 7.5,4 h 34.7 z"
+             id="path218" />
+        </g>
+      </g>
+      <text
+         transform="matrix(1.4286,0,0,1.4286,-665.7321,63.858)"
+         class="st24 st26 st27"
+         id="text223">HV</text>
+    </g>
+    <g
+       id="indicators.iso"
+       transform="translate(300)">
+      <g
+         id="g229">
+        <g
+           id="t_indicator_00000132047394188556008540000013498305178608577164_"
+           transform="matrix(0.15,0,0,0.15,1.5,0)">
+          <path
+             d="m -4224.1,267.6 -178.5,-323.1 c -6.7,-12.1 -19.4,-19.6 -33.2,-19.6 h -2.3 c -13.8,0 -26.5,7.5 -33.2,19.6 l -178.5,323.1 c -3.1,5.6 -4.7,11.9 -4.7,18.3 0,20.9 17,37.9 37.9,37.9 h 359.4 c 20.9,0 37.9,-17 37.9,-37.9 -0.1,-6.4 -1.7,-12.7 -4.8,-18.3 z m -33.2,38 h -359.4 c -10.9,0 -19.8,-8.9 -19.8,-19.8 0,-3.3 0.8,-6.6 2.5,-9.6 l 178.5,-323.1 c 3.5,-6.3 10.1,-10.2 17.3,-10.2 h 2.3 c 7.2,0 13.8,3.9 17.3,10.2 l 178.5,323.1 c 1.6,2.9 2.5,6.2 2.5,9.6 0.1,11 -8.8,19.8 -19.7,19.8 z"
+             id="path226" />
+        </g>
+      </g>
+      <g
+         id="g234">
+        <g
+           id="t_indicator_iso"
+           transform="matrix(0.065,0,0,0.065,23.5,30)">
+          <path
+             d="m -10400.1,-232.7 -170.7,-51.2 c -2.4,-0.7 -4.9,-0.7 -7.3,0 l -170.7,51.2 c -5.4,1.6 -9.1,6.6 -9.1,12.2 v 187.8 c 0,24.4 9.9,49.4 29.4,74.3 14.9,19 35.5,38.1 61.2,56.7 43.2,31.3 85.8,50.5 87.6,51.3 1.7,0.7 3.4,1.1 5.2,1.1 1.8,0 3.6,-0.4 5.2,-1.1 1.8,-0.8 44.4,-20 87.6,-51.3 25.7,-18.6 46.3,-37.7 61.2,-56.7 19.5,-24.9 29.4,-49.9 29.4,-74.3 v -187.8 c 0.1,-5.6 -3.6,-10.6 -9,-12.2 z m -16.4,200 c 0,43.2 -43.4,83.7 -79.7,110.1 -32.6,23.7 -65.7,40.4 -78.2,46.5 -12.5,-6 -45.6,-22.8 -78.2,-46.5 -36.4,-26.4 -79.7,-66.9 -79.7,-110.1 V -211 l 157.9,-47.4 157.9,47.4 z"
+             id="path231" />
+        </g>
+      </g>
+      <text
+         transform="matrix(1.4286,0,0,1.4286,-675.6694,63.858)"
+         class="st25 st26 st27"
+         id="text236">ISO</text>
+    </g>
+    <g
+       id="indicators.trip"
+       transform="translate(300)">
+      <g
+         id="g242">
+        <g
+           id="t_indicator_00000092450384796200529010000008658226681903507585_"
+           transform="matrix(0.15,0,0,0.15,1.5,0)">
+          <path
+             d="m -3608.6,267.6 -178.5,-323.1 c -6.7,-12.1 -19.4,-19.6 -33.2,-19.6 h -2.3 c -13.8,0 -26.5,7.5 -33.2,19.6 l -178.5,323.1 c -3.1,5.6 -4.7,11.9 -4.7,18.3 0,20.9 17,37.9 37.9,37.9 h 359.4 c 20.9,0 37.9,-17 37.9,-37.9 0,-6.4 -1.7,-12.7 -4.8,-18.3 z m -33.1,38 h -359.4 c -10.9,0 -19.8,-8.9 -19.8,-19.8 0,-3.3 0.8,-6.6 2.5,-9.6 l 178.5,-323.1 c 3.5,-6.3 10.1,-10.2 17.3,-10.2 h 2.3 c 7.2,0 13.8,3.9 17.3,10.2 l 178.5,323.1 c 1.6,2.9 2.5,6.2 2.5,9.6 0,11 -8.8,19.8 -19.7,19.8 z"
+             id="path239" />
+        </g>
+      </g>
+      <text
+         transform="matrix(1.4286,0,0,1.4286,-587.1997,63.858)"
+         class="st25 st26 st27"
+         id="text244">TRIP</text>
+      <path
+         d="m -572.6,38.1 v -0.7 c 0,0 -0.1,-2.1 -2.7,-5 -1.7,-1.8 -2.1,-4 -2.1,-5.8 -2.6,3.4 -1.6,6.8 -0.7,8.5 l 1,1.8 -2,-0.9 c -1.6,-0.7 -3.6,-2.8 -4.6,-5.6 -0.6,-1.7 -1,-4.3 0.4,-7.2 0.5,-1.1 2.2,-3 5,-5.1 l 0.1,-0.1 v 0 c 1.7,-1.3 6.6,-5.4 3.8,-10 l -1,-1.7 1.9,0.7 c 3.5,1.3 6.2,4.1 7.2,7.3 0.8,2.8 0.3,5.5 -1.5,7.7 -0.7,0.7 -0.9,1.7 -0.6,2.6 0.3,0.7 1,1.3 1.9,1.6 0.4,0.1 0.8,0.2 1.2,0.2 0.7,0 1.5,-0.2 2,-0.7 0.9,-0.7 1.3,-1.7 1.1,-2.7 l -0.5,-1.6 0.6,-0.3 1.1,1.3 c 2.1,2.4 1.9,6.4 0.4,8.9 -1.9,4 -6.4,6.6 -11.4,6.6 h -0.6 z m -3,-13.4 c -0.2,0.7 -1,4.4 1.4,6.9 1.6,1.7 2.7,3.5 3,5.2 4.2,-0.2 7.8,-2.5 9.4,-5.8 0.8,-1.4 1.3,-3.5 0.8,-5.4 -0.3,0.6 -0.7,1.1 -1.3,1.5 -0.8,0.6 -1.8,1 -2.9,1 v 0 c -0.6,0 -1.1,-0.1 -1.7,-0.3 -1.3,-0.4 -2.4,-1.3 -2.8,-2.5 -0.5,-1.4 -0.2,-2.8 0.8,-3.9 1.6,-1.8 2,-4.1 1.3,-6.4 -0.7,-2.3 -2.4,-4.3 -4.7,-5.6 1.5,4.9 -3.5,8.9 -5.1,10.1 -2.4,1.7 -4.1,3.6 -4.6,4.5 -1.8,3.8 -0.1,7.6 1.7,9.6 -0.6,-2.7 -0.3,-6.1 3.4,-9.4 l 1.9,-1.7 z"
+         id="path246" />
+    </g>
+  </g>
+</svg>

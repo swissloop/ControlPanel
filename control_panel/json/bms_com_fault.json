@@ -1,0 +1,44 @@
+[
+  {"error_type": "No Error", "flag": "0x0000",
+    "description": "-"
+  },
+  {"error_type": "Stack Fault", "flag": "0x0001",
+    "description": "Stack fault input (FAULTH±) is too noisy or is running at the wrong frequency.\n\nNote: The STK_FAULT_ERR flag may not be clearable under some conditions. If a\nSTK_FAULT_ERR is detected, and then no more edges appear on the high-side fault pins (as\nwould be the case if the chip above had a fault condition), it may be impossible to clear the\nSTK_FAULT_ERR flag. Once proper signaling resumes on the high-side fault pin, it will again be\npossible to clear this fault.\nMasked STK_FAULT_ERR is not cleared during initialization. As a result, there is a approximately\n5-μs window at startup where, if the high-side fault receiver detects more than four falling edges,\nthe STK_FAULT_ERR will be set even though it is masked."
+  },
+  {"error_type": "Stop Err", "flag": "0x0008",
+    "description": "The UART receiver detected an invalid stop bit on the single-ended low-side interface.\n\nThis error only appears on chips using the UART interface. COMM_CLEAR and COMM_RESET\nwill also cause this fault.\nThis error is specific to the UART interface."
+  },
+  {"error_type": "Frame Err", "flag": "0x0020",
+    "description": "A framing error has been detected.\n\nThis indicates that the chip received a start of frame on the differential communications interface\nbefore it had completed the prior frame."
+  },
+  {"error_type": "CRC Fault L", "flag": "0x0040",
+    "description": "CRC fault has been detected on the low-side interface (either single-ended UART or differential VBUS).\n\nThe frame was discarded."
+  },
+  {"error_type": "CRC Fault H", "flag": "0x0080",
+    "description": "A CRC fault has been detected on the high-side interface.\n\nThe frame was discarded. If it occurs on the high side, it may have caused this chip to fail to return\nits frame in a broadcast or group response."
+  },
+  {"error_type": "Abort L", "flag": "0x0100",
+    "description": "A framing bit with value 1 was detected on the low-side differential interface.\n\nA data byte was stopped and ignored. ABORT_L also reads 1 on devices in a stack when a\nCOMM_RESET or COMM_CLEAR is sent to the UART interface on the base device of a stack."
+  },
+  {"error_type": "Abort H", "flag": "0x0200",
+    "description": "A framing bit with value 1 was detected on the high-side differential interface.\n\nA data byte was stopped and ignored. If this occurs on the high-side interface, it is always due to a\ncommunication problem. Sending COMM_RESET or COMM_CLEAR to the UART interface on the\nbottom chip will cause this fault on the low-side interface.\nWhen it occurs on the high side, it may have caused this chip to fail to return its frame in a\nbroadcast or group response (although the microcontroller should already have detected this\nbefore this bit was read)."
+  },
+  {"error_type": "Edge L", "flag": "0x0400",
+    "description": "A falling edge was not detected on the low-side interface by the 4th bit."
+  },
+  {"error_type": "Edge H", "flag": "0x0800",
+    "description": "A falling edge was not detected on the high-side interface by the 4th bit."
+  },
+  {"error_type": "Comp Fault L", "flag": "0x1000",
+    "description": "A frame on the low-side interface (COMML) was stopped due to two or more complement errors (COMP_ERR_L)."
+  },
+  {"error_type": "Comp Fault H", "flag": "0x2000",
+    "description": "A frame on the high-side interface (COMMH) was stopped due to two or more complement errors (COMP_ERR_H)."
+  },
+  {"error_type": "Comp Warn L", "flag": "0x4000",
+    "description": "A bit on the low-side interface failed to compare with its complement. This is notification only; the frame is processed by the communications interface logic."
+  },
+  {"error_type": "Comp Warn H", "flag": "0x8000",
+    "description": "A bit on the high-side interface failed to compare with its complement. This is notification only; the frame is processed by the communications interface logic."
+  }
+]

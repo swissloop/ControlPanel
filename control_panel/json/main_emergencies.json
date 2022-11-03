@@ -1,0 +1,98 @@
+[
+  {"error_type": "EMERGENCY_NONE", "flag": "0x00000000",
+    "description": "No Emergency"
+  },
+  {"error_type": "EMERGENCY_ASSERTION_FAILED", "flag": "0x00000001",
+    "description": "Assertion Failed"
+  },
+  {"error_type": "EMERGENCY_USER_EMERGENCY", "flag": "0x00000002",
+    "description": "User Emergency"
+  },
+  {"error_type": "EMERGENCY_HEARTBEAT_NETWORK", "flag": "0x00000004",
+    "description": "Heartbeat from Control Panel Missing"
+  },
+  {"error_type": "EMERGENCY_HV_UNDER_VOLTAGE", "flag": "0x00000008",
+    "description": "High voltage under voltage"
+  },
+  {"error_type": "EMERGENCY_BRAKE_ENGAGED_DURING_RUN", "flag": "0x00000010",
+    "description": "Brake engaged during run"
+  },
+  {"error_type": "EMERGENCY_NAVIGATION_FAILURE", "flag": "0x00000020",
+    "description": "Navigation failure"
+  },
+  {"error_type": "EMERGENCY_FROM_ICU", "flag": "0x00000040",
+    "description": "Inverter ICU"
+  },
+  {"error_type": "EMERGENCY_ICU_HEARTBEAT", "flag": "0x00000080",
+    "description": "Inverter Heartbeat missing"
+  },
+  {"error_type": "EMERGENCY_FROM_BMS ", "flag": "0x00000100",
+    "description": "BMS Emergency"
+  },
+  {"error_type": "EMERGENCY_BMS_UNDERVOLTAGE ", "flag": "0x00000200",
+    "description": "BMS undervoltage"
+  },
+  {"error_type": "EMERGENCY_BMS_HEARTBEAT ", "flag": "0x00000400",
+    "description": "BMS Heartbeat missing"
+  },
+  {"error_type": "EMERGENCY_HV_ISOLATION ", "flag": "0x00000800",
+    "description": "Isolation Error"
+  },
+  {"error_type": "EMERGENCY_HV_OVER_CURRENT ", "flag": "0x00001000",
+    "description": "HV overcurrent"
+  },
+  {"error_type": "EMERGENCY_HV_OVER_TEMPERATURE ", "flag": "0x00002000",
+    "description": "HV over temperature"
+  },
+  {"error_type": "EMERGENCY_STAG_OVER_TEMPERATURE ", "flag": "0x00004000",
+    "description": "Stag over temperature"
+  },
+  {"error_type": "EMERGENCY_BMS_BALANCING", "flag": "0x00008000",
+    "description": "Object recognized by Radar"
+  },
+  {"error_type": "EMERGENCY_MAX_VELOCITY ", "flag": "0x00010000",
+    "description": "Too fast"
+  },
+  {"error_type": "EMERGENCY_LVPS_UNDERVOLTAGE ", "flag": "0x00020000",
+    "description": "LV batteries empty"
+  },
+  {"error_type": "INVERTER_EN_LINE_RESET_DURING_RUN ", "flag": "0x00040000",
+    "description": "Inverter EN lines got reset during run"
+  },
+  {"error_type": "MSG_RECEIVED ", "flag": "0x00080000",
+    "description": "High Priority Message received from CAN"
+  },
+  {"error_type": "SENSOR_DATA_MISSING ", "flag": "0x00100000",
+    "description": "Sensor Data is missing"
+  },
+  {"error_type": "SENSOR ", "flag": "0x00200000",
+    "description": "Sensor caused an Emergency"
+  },
+  {"error_type": "ICU_NREADY ", "flag": "0x00400000",
+    "description": "Ready line ICU low"
+  },
+  {"error_type": "BMS_LEFT_NREADY ", "flag": "0x00800000",
+    "description": "Ready line BMS Left low"
+  },
+  {"error_type": "BMS_RIGHT_NREADY ", "flag": "0x01000000",
+    "description": "Ready line BMS Right low"
+  },
+  {"error_type": "HV_BOX_VOLTAGE_DIFFERENCE ", "flag": "0x02000000",
+    "description": "Big Voltage Difference of left and right box caused an emergency"
+  },
+  {"error_type": "SETUP_TIMEOUT ", "flag": "0x04000000",
+    "description": "Setup took more than 20 seconds"
+  },
+  {"error_type": "SHUTDOWN_TIMEOUT ", "flag": "0x08000000",
+    "description": "Shutdown took more than 20 seconds"
+  },
+  {"error_type": "CONTROLLED_BRAKE ", "flag": "0x10000000",
+    "description": "Controlled braking was evaluated too risky"
+  },
+  {"error_type": "LOW_PRESSURE ", "flag": "0x20000000",
+    "description": "Low pressure in brake tank"
+  },
+  {"error_type": "BAT_VOLTAGE_OVER_MAX_VOLTAGE ", "flag": "0x40000000",
+    "description": "Battery voltages are higher then configured max voltage"
+  }
+]

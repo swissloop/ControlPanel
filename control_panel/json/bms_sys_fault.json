@@ -1,0 +1,29 @@
+[
+  {"error_type": "No Error", "flag": "0x00",
+    "description": "-"
+  },
+  {"error_type": "VP Clamp", "flag": "0x01",
+    "description": "NPNB pin is monitored and clamped to keep the NPNB pin from going over voltage."
+  },
+  {"error_type": "VP Fault", "flag": "0x02",
+    "description": "VP supply failure detected in analog die."
+  },
+  {"error_type": "VM Fault", "flag": "0x04",
+    "description": "VM supply failure detected in analog die."
+  },
+  {"error_type": "V_DIG Fault", "flag": "0x08",
+    "description": "VDIG supply failure detected in the analog die."
+  },
+  {"error_type": "Int Temp", "flag": "0x10",
+    "description": "Overtemperature condition in the digital die.\n\nIf UNLATCHED_FAULT is set, this bit is self-clearing."
+  },
+  {"error_type": "V_DIG Wake Fault", "flag": "0x20",
+    "description": "VDIG supply was already high on wakeup. This could happen if the NPN transistor\nwere leaking and preventing VDIG from going away when VP/VDIG shuts down. It could also\noccur if the chip is reset (in which case the VDIG supply remained on) or if it was shut down too\nbriefly to allow the supply time to ramp down. This bit is provided to allow detection of leakage\ncurrent into the supply during shutdown.\nThis bit is checked only set by the device during the device initialization sequence. Once\ncleared, it will not set again until the block is reset."
+  },
+  {"error_type": "COM Timeout", "flag": "0x40",
+    "description": "Communications timeout has been detected."
+  },
+  {"error_type": "SYS Reset", "flag": "0x80",
+    "description": "A system reset has been detected."
+  }
+]

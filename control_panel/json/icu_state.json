@@ -1,0 +1,10 @@
+[
+  {"description": "Idle", "flag": 0},
+  {"description": "Setup", "flag": 1},
+  {"description": "Ready", "flag": 2},
+  {"description": "Run", "flag": 3},
+  {"description": "Shutdown", "flag": 4},
+  {"description": "Emergency", "flag": 5},
+  {"description": "Reset", "flag": 6},
+  {"description": "Disconnected", "flag": 10}
+]

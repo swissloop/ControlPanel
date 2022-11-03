@@ -1,0 +1,101 @@
+[
+  {"error_type": "ERROR_NONE", "flag": "0x00000000",
+    "description": "ERROR_NONE"
+  },
+  {"error_type": "ERROR_HAL", "flag": "0x00000001",
+    "description": "ERROR_HAL"
+  },
+  {"error_type": "ERROR_INVALID_ARGUMENT", "flag": "0x00000002",
+    "description": "ERROR_INVALID_ARGUMENT"
+  },
+  {"error_type": "ERROR_OVERFLOW", "flag": "0x00000004",
+    "description": "ERROR_OVERFLOW"
+  },
+  {"error_type": "ERROR_NOT_IMPL", "flag": "0x00000008",
+    "description": "ERROR_NOT_IMPL"
+  },
+  {"error_type": "ERROR_NOT_INIT", "flag": "0x00000010",
+    "description": "ERROR_NOT_INIT"
+  },
+  {"error_type": "ERROR_NETWORK_TIMEOUT", "flag": "0x00000020",
+    "description": "ERROR_NETWORK_TIMEOUT"
+  },
+  {"error_type": "ERROR_CAN_FD", "flag": "0x00000040",
+    "description": "ERROR_CAN_FD"
+  },
+  {"error_type": "ERROR_CAN_FD_QUEUE_EMPTY", "flag": "0x00000080",
+    "description": "ERROR_CAN_FD_QUEUE_EMPTY"
+  },
+  {"error_type": "ERROR_SI", "flag": "0x00000100",
+    "description": "ERROR_SI"
+  },
+  {"error_type": "ERROR_SI_STARTUP", "flag": "0x00000200",
+    "description": "ERROR_SI_STARTUP"
+  },
+  {"error_type": "ERROR_SI_CMD", "flag": "0x00000400",
+    "description": "ERROR_SI_CMD"
+  },
+  {"error_type": "ERROR_SI_CONFIG", "flag": "0x00000800",
+    "description": "ERROR_SI_CONFIG"
+  },
+  {"error_type": "ERROR_SI_INVALID_DATA", "flag": "0x00001000",
+    "description": "ERROR_SI_INVALID_DATA"
+  },
+  {"error_type": "ERROR_SI_DECODE", "flag": "0x00002000",
+    "description": "ERROR_SI_DECODE"
+  },
+  {"error_type": "ERROR_SI_OM20", "flag": "0x00004000",
+    "description": "ERROR_SI_OM20"
+  },
+  {"error_type": "ERROR_SI_PBM4", "flag": "0x00008000",
+    "description": "ERROR_SI_PBM4"
+  },
+  {"error_type": "ERROR_SI_CORRAIL", "flag": "0x00010000",
+    "description": "ERROR_SI_CORRAIL"
+  },
+  {"error_type": "ERROR_SI_THERMISTOR", "flag": "0x00020000",
+    "description": "ERROR_SI_THERMISTOR"
+  },
+  {"error_type": "ERROR_SI_TELEMETRY_FRAME", "flag": "0x00040000",
+    "description": "Telemetry frame is not equal to global frame"
+  },
+  {"error_type": "ERROR_BRAKE", "flag": "0x00040000",
+    "description": "Brake caused an error"
+  },
+  {"error_type": "ERROR_STATE_ILLEGAL_TRANSITION", "flag": "0x00100000",
+    "description": "ERROR_STATE_ILLEGAL_TRANSITION"
+  },
+  {"error_type": "ERROR_LVPS_UNDERVOLTAGE", "flag": "0x00200000",
+    "description": "ERROR_LVPS_UNDERVOLTAGE"
+  },
+  {"error_type": "ERROR_SD", "flag": "0x00400000",
+    "description": "ERROR_SD"
+  },
+  {"error_type": "ERROR_RUN_CONFIG", "flag": "0x00800000",
+    "description": "ERROR_RUN_CONFIG"
+  },
+  {"error_type": "ERROR_MOTOR_OVERTEMP", "flag": "0x01000000",
+    "description": "ERROR_MOTOR_OVERTEMP"
+  },
+  {"error_type": "Brake_Distance_reached", "flag": "0x02000000",
+    "description": "Brake_Distance_reached"
+  },
+  {"error_type": "Brake_Time_reached", "flag": "0x04000000",
+    "description": "Brake_Time_reached"
+  },
+  {"error_type": "Brake_MotorStop", "flag": "0x08000000",
+    "description": "Brake_MotorStop"
+  },
+  {"error_type": "Brake_User", "flag": "0x10000000",
+    "description": "Brake_User"
+  },
+  {"error_type": "Brake_ControlledBrakingEvaluation", "flag": "0x20000000",
+    "description": "Brake_ControlledBrakingEvaluation"
+  },
+  {"error_type": "ERROR_EMERGENCY", "flag": "0x40000000",
+    "description": "ERROR_EMERGENCY"
+  },
+  {"error_type": "ERROR_UNKNOWN", "flag": "0x80000000",
+    "description": "Unknown error"
+  }
+]
